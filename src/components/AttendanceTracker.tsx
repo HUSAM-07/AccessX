@@ -96,7 +96,7 @@ export default function AttendanceTracker() {
           <Button onClick={clearAllSubjects} className="mt-4">Clear All Subjects</Button>
         </div>
       ) : (
-        <p>No subjects added yet. Use the 'Add New Subject' section to start tracking attendance.</p>
+        <p>No subjects added yet. Use the Add New Subject section to start tracking attendance.</p>
       )}
     </div>
   )
