@@ -8,7 +8,11 @@ interface Subject {
   missed: number
 }
 
-export default function AttendanceTracker() {
+interface AttendanceTrackerProps {
+  onBack: () => void;
+}
+
+function AttendanceTracker({ onBack }: AttendanceTrackerProps) {
   const [subjects, setSubjects] = useState<Record<string, Subject>>({})
   const [newSubject, setNewSubject] = useState("")
   const [totalClasses, setTotalClasses] = useState(30)
@@ -101,3 +105,5 @@ export default function AttendanceTracker() {
     </div>
   )
 }
+
+export default AttendanceTracker;
