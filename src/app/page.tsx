@@ -10,8 +10,10 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState("home");
 
   const webPages = [
-    { name: "Uni-Notes", url: "https://uninotes.com" },
+    { name: "Uni-Notes", url: "https://uni-notes.netlify.app/" },
     { name: "ERP", url: "https://erp.bits-pilani.ac.in" },
+    { name: "Google DSC Resources", url: "https://gdscbpdc.github.io/"},
+    { name: "ACM Resources", url: "https://openlib-cs.acmbpdc.org/"}
     // Add other web pages as needed
   ];
 
