@@ -17,7 +17,8 @@ const About = () => {
         <li>Create a personalized dashboard to display your bookmarked portals</li>
       </ul>
       <p>
-        We're committed to providing a user-friendly, intuitive, and responsive experience across all devices. If you have any questions or feedback, please don't hesitate to contact us.
+        {/* Replace the single quotes with &apos; or use double quotes */}
+        AccessX isn&apos;t just another AI tool; it&apos;s a gateway to limitless possibilities.
       </p>
     </div>
   )
