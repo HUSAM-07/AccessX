@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -9,10 +11,10 @@ interface Subject {
 }
 
 interface AttendanceTrackerProps {
-  onBack: () => void;
+  // Remove the onBack prop from here
 }
 
-function AttendanceTracker({ onBack }: AttendanceTrackerProps) {
+const AttendanceTracker: React.FC<AttendanceTrackerProps> = () => {
   const [subjects, setSubjects] = useState<Record<string, Subject>>({})
   const [newSubject, setNewSubject] = useState("")
   const [totalClasses, setTotalClasses] = useState(30)
@@ -106,4 +108,6 @@ function AttendanceTracker({ onBack }: AttendanceTrackerProps) {
   )
 }
 
-export default AttendanceTracker;
+export default function AttendanceTrackerPage() {
+  return <AttendanceTracker />;
+}
