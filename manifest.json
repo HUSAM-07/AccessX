@@ -1,0 +1,17 @@
+{
+    "name": "UniDash",
+    "short_name": "UniDash",
+    "theme_color": "#000000",
+    "background_color": "#000000",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "description": "Access all your university tools and resources in one place",
+    "icons": [
+      {
+        "src": "/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+   }
