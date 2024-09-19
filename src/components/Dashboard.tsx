@@ -8,7 +8,7 @@ const portalLinks = [
     { title: 'ACM lib Resources', url: 'https://openlib-cs.acmbpdc.org/', description: 'A library of resources provided by ACM BPDC' },
 ];
 
-const Dashboard = () => {
+const Dashboard: React.FC = () => {
     return (
         <div className="w-full max-w-4xl mx-auto mt-8">
             <h2 className="text-2xl font-bold mb-4">Bookmarked Portals</h2>

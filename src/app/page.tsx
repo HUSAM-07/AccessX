@@ -1,9 +1,5 @@
-import MainContent from './components/MainContent'
+import LandingPage from '@/app/components/ui/LandingPage';
 
 export default function Home() {
-  return (
-    <main className="min-h-screen">
-      <MainContent />
-    </main>
-  )
+  return <LandingPage />;
 }
