@@ -22,38 +22,38 @@ export default function RootLayout({
         <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
           <div className="container flex h-14 items-center">
             <NavigationMenu>
-              <NavigationMenuList className="space-x-4">
+              <NavigationMenuList className="space-x-1 sm:space-x-2 md:space-x-4 flex-wrap justify-center">
                 <NavigationMenuItem>
                   <Link href="/" legacyBehavior passHref>
-                    <NavigationMenuLink className="font-medium px-3 py-2 hover-underline-animation">
+                    <NavigationMenuLink className="font-medium text-xs sm:text-sm md:text-base px-2 sm:px-3 py-1 sm:py-2 hover-underline-animation">
                       Home
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <Link href="/about" legacyBehavior passHref>
-                    <NavigationMenuLink className="font-medium px-3 py-2 hover-underline-animation">
+                    <NavigationMenuLink className="font-medium text-xs sm:text-sm md:text-base px-2 sm:px-3 py-1 sm:py-2 hover-underline-animation">
                       About
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <Link href="/course-handouts" legacyBehavior passHref>
-                    <NavigationMenuLink className="font-medium px-3 py-2 hover-underline-animation">
+                    <NavigationMenuLink className="font-medium text-xs sm:text-sm md:text-base px-2 sm:px-3 py-1 sm:py-2 hover-underline-animation">
                       Course Handouts
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <Link href="/paper-analysis" legacyBehavior passHref>
-                    <NavigationMenuLink className="font-medium px-3 py-2 hover-underline-animation">
+                    <NavigationMenuLink className="font-medium text-xs sm:text-sm md:text-base px-2 sm:px-3 py-1 sm:py-2 hover-underline-animation">
                       Paper Analysis
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <Link href="/attendance-tracker" legacyBehavior passHref>
-                    <NavigationMenuLink className="font-medium px-3 py-2 hover-underline-animation">
+                    <NavigationMenuLink className="font-medium text-xs sm:text-sm md:text-base px-2 sm:px-3 py-1 sm:py-2 hover-underline-animation">
                       Attendance Tracker
                     </NavigationMenuLink>
                   </Link>
