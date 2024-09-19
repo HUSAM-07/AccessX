@@ -1,17 +1,14 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu"
 import Link from 'next/link'
-import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Uni◉Dash - BITS Pilani Dubai Campus',
-  description: 'Access all your university tools and resources in one place',
-  icons: {
-    icon: '/favicon.svg', // Path to your new favicon
-  },
+  title: 'BITS Student Portal',
+  description: 'A portal for BITS Pilani students',
 }
 
 export default function RootLayout({
@@ -22,16 +19,50 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <nav className="bg-gray-800 text-white p-4">
-          <ul className="flex space-x-4">
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/course-handouts">Course Handouts</Link></li>
-            <li><Link href="/attendance-tracker">Attendance Tracker</Link></li>
-            {/* Add more navigation items as needed */}
-          </ul>
-        </nav>
-        {children}
-        <Analytics />
+        <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+          <div className="container flex h-14 items-center">
+            <NavigationMenu>
+              <NavigationMenuList className="space-x-4">
+                <NavigationMenuItem>
+                  <Link href="/" legacyBehavior passHref>
+                    <NavigationMenuLink className="font-medium px-3 py-2 hover-underline-animation">
+                      Home
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <Link href="/about" legacyBehavior passHref>
+                    <NavigationMenuLink className="font-medium px-3 py-2 hover-underline-animation">
+                      About
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <Link href="/course-handouts" legacyBehavior passHref>
+                    <NavigationMenuLink className="font-medium px-3 py-2 hover-underline-animation">
+                      Course Handouts
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <Link href="/paper-analysis" legacyBehavior passHref>
+                    <NavigationMenuLink className="font-medium px-3 py-2 hover-underline-animation">
+                      Paper Analysis
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <Link href="/attendance-tracker" legacyBehavior passHref>
+                    <NavigationMenuLink className="font-medium px-3 py-2 hover-underline-animation">
+                      Attendance Tracker
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+          </div>
+        </header>
+        <main>{children}</main>
       </body>
     </html>
   )

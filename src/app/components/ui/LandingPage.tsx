@@ -2,20 +2,23 @@
 
 import React from 'react'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 import { Button } from "@/components/ui/button"
 
-interface LandingPageProps {
-  onEnter: () => void;
-}
+const LandingPage: React.FC = () => {
+  const router = useRouter()
 
-const LandingPage: React.FC<LandingPageProps> = ({ onEnter }) => {
+  const handleNavigation = () => {
+    router.push('/dashboard')
+  }
+
   return (
     <div className="min-h-screen flex flex-col">
       <nav className="p-4">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold">Unidash</h1>
+          <h1 className="text-2xl font-bold">UniDash</h1>
           <Button 
-            onClick={onEnter}
+            onClick={handleNavigation}
             variant="outline"
             className="rounded-full"
           >
@@ -36,7 +39,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onEnter }) => {
         </p>
         <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
           <Button 
-            onClick={onEnter} 
+            onClick={handleNavigation}
             className="bg-black text-white px-6 py-3 rounded-full w-full sm:w-auto"
           >
             Go to Dashboard
