@@ -29,13 +29,13 @@ const subjectOptions = [
   "Computer Networks",
   "Database Systems",
   "Operating Systems",
-  "Data Structures",
-  "Algorithms",
+  "Data Structures & Algorithms",
+  "Object Oriented Programming",
   "Software Engineering",
-  "Web Development",
+  "NLP",
   "Machine Learning",
   "Artificial Intelligence",
-  "Cybersecurity",
+  "Cryptography",
 ]
 
 const AttendanceTracker = () => {
