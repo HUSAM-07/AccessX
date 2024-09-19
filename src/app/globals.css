@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-  
+
+/* Remove or comment out the following media query */
+/*
 @media (max-width: 640px) {
   .NavigationMenuList {
     flex-direction: column;
@@ -17,6 +19,7 @@
     padding: 0.5rem 1rem;
   }
 }
+*/
 
 .hover-underline-animation {
   position: relative;
