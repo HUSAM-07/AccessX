@@ -14,9 +14,9 @@ export default function AboutPage() {
       </p>
       <ul className="list-disc list-inside mb-4 text-sm sm:text-base">
         <li>Search for specific universities or portals</li>
-        <li>Browse a comprehensive list of universities and their corresponding portals</li>
-        <li>Bookmark your favorite university portals for quick access</li>
-        <li>Create a personalized dashboard to display your bookmarked portals</li>
+        <li>Browse a comprehensive list of university resources</li>
+        <li>Find tools and resources to help you with your university life</li>
+        <li>**Find all the course handouts in a single place**</li>
       </ul>
       <div className="mb-6 flex justify-center">
         <Image
