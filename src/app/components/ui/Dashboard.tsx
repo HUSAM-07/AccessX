@@ -11,6 +11,7 @@ const portalLinks = [
   { title: 'Uni-Notes', url: 'https://uni-notes.netlify.app/', description: 'Course notes contributed by students', color: 'bg-yellow-100' },
   { title: 'Google Developer Groups Resources', url: 'https://gdscbpdc.github.io/', description: 'Access to technical resources and guides by Google Developers Groups', color: 'bg-red-100' },
   { title: 'ACM Lib Resources', url: 'https://openlib-cs.acmbpdc.org/', description: 'Library of resources by ACM BPDC', color: 'bg-purple-100' },
+  { title: 'MTC Resources', url: 'https://mtcbpdcdubai.github.io/Coursework-Resources-and-Links/', description: 'Set of resources by MTC', color: 'bg-orange-100' },
   { title: 'BITS Library', url: 'http://webopac.bits-dubai.ac.ae/AutoLib/', description: 'Access to books, PYQs and journals', color: 'bg-orange-100' },
 ]
 
