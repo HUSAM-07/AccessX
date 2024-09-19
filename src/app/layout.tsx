@@ -9,8 +9,11 @@ import { Menu } from 'lucide-react'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'BITS Student Portal',
-  description: 'A portal for BITS Pilani students',
+  title: 'UniDash',
+  description: 'Access all your university tools and resources in one place',
+  manifest: '/manifest.json',
+  themeColor: '#ffffff',
+  viewport: 'minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover',
 }
 
 const navItems = [
@@ -28,6 +31,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="apple-touch-icon" href="/icon-192x192.png" />
+      </head>
       <body className={inter.className}>
         <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
           <div className="container flex h-14 items-center">
