@@ -3,6 +3,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface HomePageProps {
   onEnter: () => void;
@@ -15,7 +16,13 @@ function HomePage({ onEnter, navigation }: HomePageProps) {
       {navigation}
       <main className="flex-grow flex flex-col items-center justify-center px-4 max-w-4xl mx-auto text-center">
         <div className="text-sm mb-4 flex items-center justify-center">
-          <img src="/bits.png" alt="Student Council Logo" className="w-6 h-6 mr-2 rounded-full" />
+          <Image
+            src="/bits.png"
+            alt="Student Council Logo"
+            width={500} // Specify the width
+            height={300} // Specify the height
+            className="w-6 h-6 mr-2 rounded-full"
+          />
           <span className="text-xs sm:text-sm">Backed by Student Council BITS Pilani Dubai Campus</span>
         </div>
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
