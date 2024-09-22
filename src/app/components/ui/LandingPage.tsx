@@ -35,7 +35,7 @@ const LandingPage: React.FC = () => {
           Access all your university tools and resources in one place.
         </h1>
         <p className="text-base sm:text-lg md:text-xl mb-8">
-          Quickly find info about course requirements, simplify resources navigation, be organized. Save four hours on your academic planning.
+          Quickly find info about course requirements, simplify resources navigation, be organized. Save hours on your academic planning.
         </p>
         <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
           <Button 
