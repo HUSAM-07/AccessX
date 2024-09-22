@@ -16,7 +16,7 @@ export default function AboutPage() {
         <li>Search for specific universities or portals</li>
         <li>Browse a comprehensive list of university resources</li>
         <li>Find tools and resources to help you with your university life</li>
-        <li>**Find all the course handouts in a single place**</li>
+        <li><strong>Find all the course handouts in a single place</strong></li>
       </ul>
       <div className="mb-6 flex justify-center">
         <Image
