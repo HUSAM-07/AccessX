@@ -32,6 +32,9 @@ function DesktopMenu() {
         <NavigationMenuItem>
           <NavigationMenuLink className="hover:underline" href="/paper-analysis">Paper Analysis</NavigationMenuLink>
         </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink className="hover:underline" href="/career">Career Guidance</NavigationMenuLink>
+        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   );
