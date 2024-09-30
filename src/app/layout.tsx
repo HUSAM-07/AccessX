@@ -59,6 +59,12 @@ function MobileMenu() {
         <DropdownMenuItem>
           <a href="/course-handouts" className="w-full">Course Handouts</a>
         </DropdownMenuItem>
+        <DropdownMenuItem>
+          <a href="/paper-analysis" className="w-full">Paper Analysis</a>
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <a href="/career" className="w-full">Career Guidance</a>
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
