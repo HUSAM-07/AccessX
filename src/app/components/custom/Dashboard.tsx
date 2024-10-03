@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { auth } from '@/lib/firebase'
 import { User } from 'firebase/auth'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -24,20 +23,23 @@ const Dashboard: React.FC = () => {
   const router = useRouter()
 
   useEffect(() => {
-    if (auth) {
-      const unsubscribe = auth.onAuthStateChanged((user) => {
-        setUser(user)
+    const initializeAuth = async () => {
+      const { auth } = await import('@/lib/firebase')
+      if (auth) {
+        const unsubscribe = auth.onAuthStateChanged((user) => {
+          setUser(user)
+          setLoading(false)
+          if (!user) {
+            router.push('/')
+          }
+        })
+        return () => unsubscribe()
+      } else {
         setLoading(false)
-        if (!user) {
-          router.push('/')
-        }
-      })
-
-      return () => unsubscribe()
-    } else {
-      setLoading(false)
-      router.push('/')
+        router.push('/')
+      }
     }
+    initializeAuth()
   }, [router])
 
   if (loading) {
