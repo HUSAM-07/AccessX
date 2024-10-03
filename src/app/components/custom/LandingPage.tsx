@@ -4,8 +4,7 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { Button } from "@/components/ui/button"
-import { auth } from '@/lib/firebase'
-import { signInWithPopup, GoogleAuthProvider, User } from 'firebase/auth'
+import { User } from 'firebase/auth'
 
 const LandingPage: React.FC = () => {
   const router = useRouter()
@@ -14,27 +13,33 @@ const LandingPage: React.FC = () => {
   const [authError, setAuthError] = useState<string | null>(null)
 
   useEffect(() => {
-    if (auth) {
-      const unsubscribe = auth.onAuthStateChanged((user) => {
-        setUser(user)
+    const initializeAuth = async () => {
+      const { auth } = await import('@/lib/firebase')
+      if (auth) {
+        const unsubscribe = auth.onAuthStateChanged((user) => {
+          setUser(user)
+          setLoading(false)
+        })
+        return () => unsubscribe()
+      } else {
         setLoading(false)
-      })
-
-      return () => unsubscribe()
-    } else {
-      setLoading(false)
+      }
     }
+    initializeAuth()
   }, [])
 
   const handleNavigation = async () => {
     if (user) {
       router.push('/dashboard')
-    } else if (auth) {
+    } else {
       try {
-        const provider = new GoogleAuthProvider()
-        await signInWithPopup(auth, provider)
-        // User is signed in, redirect to dashboard
-        router.push('/dashboard')
+        const { auth } = await import('@/lib/firebase')
+        const { signInWithPopup, GoogleAuthProvider } = await import('firebase/auth')
+        if (auth) {
+          const provider = new GoogleAuthProvider()
+          await signInWithPopup(auth, provider)
+          router.push('/dashboard')
+        }
       } catch (error) {
         console.error('Authentication error:', error)
         setAuthError('Failed to sign in. Please try again.')
