@@ -1,6 +1,9 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
+import { auth } from '@/lib/firebase'
+import { User } from 'firebase/auth'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ExternalLink } from 'lucide-react'
@@ -16,6 +19,35 @@ const portalLinks = [
 ]
 
 const Dashboard: React.FC = () => {
+  const [user, setUser] = useState<User | null>(null)
+  const [loading, setLoading] = useState(true)
+  const router = useRouter()
+
+  useEffect(() => {
+    if (auth) {
+      const unsubscribe = auth.onAuthStateChanged((user) => {
+        setUser(user)
+        setLoading(false)
+        if (!user) {
+          router.push('/')
+        }
+      })
+
+      return () => unsubscribe()
+    } else {
+      setLoading(false)
+      router.push('/')
+    }
+  }, [router])
+
+  if (loading) {
+    return <div>Loading...</div>
+  }
+
+  if (!user) {
+    return null // This will prevent the dashboard from rendering before redirecting
+  }
+
   return (
     <div className="w-full">
       <div className="max-w-7xl mx-auto px-4 py-8">

@@ -1,15 +1,45 @@
 'use client'
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { Button } from "@/components/ui/button"
+import { auth } from '@/lib/firebase'
+import { signInWithPopup, GoogleAuthProvider, User } from 'firebase/auth'
 
 const LandingPage: React.FC = () => {
   const router = useRouter()
+  const [user, setUser] = useState<User | null>(null)
+  const [loading, setLoading] = useState(true)
+  const [authError, setAuthError] = useState<string | null>(null)
 
-  const handleNavigation = () => {
-    router.push('/dashboard')
+  useEffect(() => {
+    if (auth) {
+      const unsubscribe = auth.onAuthStateChanged((user) => {
+        setUser(user)
+        setLoading(false)
+      })
+
+      return () => unsubscribe()
+    } else {
+      setLoading(false)
+    }
+  }, [])
+
+  const handleNavigation = async () => {
+    if (user) {
+      router.push('/dashboard')
+    } else if (auth) {
+      try {
+        const provider = new GoogleAuthProvider()
+        await signInWithPopup(auth, provider)
+        // User is signed in, redirect to dashboard
+        router.push('/dashboard')
+      } catch (error) {
+        console.error('Authentication error:', error)
+        setAuthError('Failed to sign in. Please try again.')
+      }
+    }
   }
 
   return (
@@ -22,7 +52,7 @@ const LandingPage: React.FC = () => {
             variant="outline"
             className="rounded-full"
           >
-            Log in
+            {user ? 'Dashboard' : 'Log in'}
           </Button>
         </div>
       </nav>
@@ -42,10 +72,11 @@ const LandingPage: React.FC = () => {
             onClick={handleNavigation}
             className="bg-black text-white px-6 py-3 rounded-full w-full sm:w-auto"
           >
-            Go to Dashboard
+            {loading ? 'Loading...' : (user ? 'Go to Dashboard' : 'Sign In')}
           </Button>
           <span className="text-sm sm:text-base">Join 1000+ faculty and students</span>
         </div>
+        {authError && <p className="text-red-500 mt-4">{authError}</p>}
       </main>
     </div>
   )
