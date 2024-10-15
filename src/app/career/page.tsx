@@ -76,12 +76,42 @@ export default function CareerPage() {
   if (error) return <div>Failed to load</div>
   if (!companies) return <div>Loading...</div>
 
+  const sections = [
+    { id: "about", title: "What We Are" },
+    { id: "vision-mission", title: "Our Vision and Mission" },
+    { id: "support", title: "Support We Offer" },
+    { id: "companies", title: "List of Companies" },
+  ]
+
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6">Career Services Division</h1>
       
+      {/* Navigation */}
+      <nav className="mb-8">
+        <ul className="flex flex-wrap justify-center gap-2 md:gap-4">
+          {sections.map((section, index) => (
+            <React.Fragment key={section.id}>
+              {index > 0 && (
+                <Separator orientation="vertical" className="h-6 hidden md:block" />
+              )}
+              <li>
+                <a
+                  href={`#${section.id}`}
+                  className="text-sm md:text-base text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  {section.title}
+                </a>
+              </li>
+            </React.Fragment>
+          ))}
+        </ul>
+      </nav>
+
+      <Separator className="my-8" />
+      
       {/* About CSD Section */}
-      <section className="mb-12">
+      <section id="about" className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">What We Are</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-white p-6 rounded-xl shadow-md">
@@ -106,7 +136,7 @@ export default function CareerPage() {
       <Separator className="my-8" />
 
       {/* Vision and Mission Section */}
-      <section className="mb-12">
+      <section id="vision-mission" className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">Our Vision and Mission</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-blue-50 p-6 rounded-xl shadow-md">
@@ -127,7 +157,7 @@ export default function CareerPage() {
       <Separator className="my-8" />
 
       {/* Support We Offer Section */}
-      <section className="mb-12">
+      <section id="support" className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">Support We Offer</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {["Career Guidance", "Career Talks & Workshops", "Campus Placement Program", 
@@ -142,7 +172,7 @@ export default function CareerPage() {
       <Separator className="my-8" />
 
       {/* Companies Section */}
-      <section>
+      <section id="companies">
         <h2 className="text-2xl font-semibold mb-6">List of Companies</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
           <div className="bg-gray-50 p-6 rounded-xl border-2 border-gray-200">
