@@ -98,9 +98,10 @@ export default function CareerPage() {
               <li>
                 <a
                   href={`#${section.id}`}
-                  className="text-sm md:text-base text-gray-600 hover:text-gray-900 transition-colors"
+                  className="text-sm md:text-base text-gray-600 hover:text-gray-900 transition-colors relative group"
                 >
                   {section.title}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 transition-all group-hover:w-full"></span>
                 </a>
               </li>
             </React.Fragment>
