@@ -13,10 +13,11 @@ export default function AboutPage() {
         With UniDash, You Can:
       </p>
       <ul className="list-disc list-inside mb-4 text-sm sm:text-base">
-        <li>Search for specific universities or portals</li>
-        <li>Browse a comprehensive list of university resources</li>
+        <li>Find all university portals in a single page(LMS, ERP, BITS Library, Association resources and notes compiled by students)</li>
+        <li>In-built attendance tracker</li>
         <li>Find tools and resources to help you with your university life</li>
         <li><strong>Find all the course handouts in a single place</strong></li>
+        <li><strong>Career Guidance & Practice School Resources</strong></li>
       </ul>
       <div className="mb-6 flex justify-center">
         <Image
