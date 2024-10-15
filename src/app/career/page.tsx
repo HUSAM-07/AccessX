@@ -88,7 +88,7 @@ export default function CareerPage() {
               The Career Services Division at BITS Pilani Dubai plays a pivotal role in facilitating career opportunities for students in their final years and after graduation. We foster strong industry partnerships to bring a wide range of employment options, including full-time, part-time, and internship positions.
             </p>
             <p className="text-gray-700">
-              Over the years, we've supported numerous BITS alumni in developing essential soft and hard skills through workshops, talks, and seminars that prepare them for the professional world.
+              Over the years, we&apos;ve supported numerous BITS alumni in developing essential soft and hard skills through workshops, talks, and seminars that prepare them for the professional world.
             </p>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-md">
