@@ -5,6 +5,7 @@ import Image from "next/image"
 import { Check, ChevronsUpDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+import { Separator } from "@/components/ui/separator"
 import {
   Command,
   CommandEmpty,
@@ -102,8 +103,11 @@ export default function CareerPage() {
         </div>
       </section>
 
+      <Separator className="my-8" />
+
       {/* Vision and Mission Section */}
       <section className="mb-12">
+        <h2 className="text-2xl font-semibold mb-4">Our Vision and Mission</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-blue-50 p-6 rounded-xl shadow-md">
             <h2 className="text-2xl font-semibold mb-4 text-blue-700">Vision</h2>
@@ -120,6 +124,8 @@ export default function CareerPage() {
         </div>
       </section>
 
+      <Separator className="my-8" />
+
       {/* Support We Offer Section */}
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">Support We Offer</h2>
@@ -132,6 +138,8 @@ export default function CareerPage() {
           ))}
         </div>
       </section>
+
+      <Separator className="my-8" />
 
       {/* Companies Section */}
       <section>
@@ -226,6 +234,8 @@ export default function CareerPage() {
           </div>
         </div>
       </section>
+
+      <Separator className="my-8" />
 
       <div className="text-center text-sm text-gray-500 mt-8">
         <p>All the companies listed are potential companies that have been reported to come for recruitment season every year.</p>
