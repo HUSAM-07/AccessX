@@ -5,6 +5,8 @@ import Footer from "@/app/components/custom/Footer";
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import { Menu } from "lucide-react";
+import ShimmerButton from "@/components/magicui/shimmer-button";
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,7 +35,12 @@ function DesktopMenu() {
           <NavigationMenuLink className="hover:underline" href="/paper-analysis">Paper Analysis</NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink className="hover:underline" href="/career">Career Guidance</NavigationMenuLink>
+          <ShimmerButton className="text-sm">
+            <NavigationMenuLink className="inline-flex items-center" href="/career">
+              Career Guidance
+              <ArrowRightIcon className="ml-1 h-3 w-3" />
+            </NavigationMenuLink>
+          </ShimmerButton>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
@@ -62,8 +69,13 @@ function MobileMenu() {
         <DropdownMenuItem>
           <a href="/paper-analysis" className="w-full">Paper Analysis</a>
         </DropdownMenuItem>
-        <DropdownMenuItem>
-          <a href="/career" className="w-full">Career Guidance</a>
+        <DropdownMenuItem asChild>
+          <ShimmerButton className="w-full justify-start">
+            <a href="/career" className="inline-flex items-center w-full">
+              Career Guidance
+              <ArrowRightIcon className="ml-1 h-3 w-3" />
+            </a>
+          </ShimmerButton>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
