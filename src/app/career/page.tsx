@@ -5,6 +5,7 @@ import Image from "next/image"
 import { Check, ChevronsUpDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+import { VelocityScroll } from "@/components/ui/scroll-based-velocity"
 import { Separator } from "@/components/ui/separator"
 import {
   Command,
@@ -160,14 +161,11 @@ export default function CareerPage() {
       {/* Support We Offer Section */}
       <section id="support" className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">Support We Offer</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {["Career Guidance", "Career Talks & Workshops", "Campus Placement Program", 
-            "Career Readiness Programs", "Career Fairs", "Higher Education Support"].map((item, index) => (
-            <div key={index} className="bg-gray-100 p-4 rounded-lg text-center">
-              <p className="text-gray-800 font-medium">{item}</p>
-            </div>
-          ))}
-        </div>
+        <VelocityScroll
+          text="Career Guidance • Career Talks & Workshops • Campus Placement Program • Career Readiness Programs • Career Fairs • Higher Education Support • "
+          default_velocity={5}
+          className="font-display text-center text-2xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-4xl md:leading-[3rem]"
+        />
       </section>
 
       <Separator className="my-8" />
