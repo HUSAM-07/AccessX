@@ -163,7 +163,7 @@ export default function CareerPage() {
         <h2 className="text-2xl font-semibold mb-4">Support We Offer</h2>
         <VelocityScroll
           text="Career Guidance • Career Talks & Workshops • Campus Placement Program • Career Readiness Programs • Career Fairs • Higher Education Support • "
-          default_velocity={5}
+          default_velocity={2}
           className="font-display text-center text-2xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-4xl md:leading-[3rem]"
         />
       </section>
