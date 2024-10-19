@@ -93,17 +93,17 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <SidebarProvider>
-          <div className="flex">
+          <div className="flex h-screen">
             {showSidebar && <AppSidebar />}
-            <div className="flex-1">
+            <div className="flex flex-col flex-grow overflow-hidden">
               <header className="flex justify-between items-center p-4 md:px-8 md:justify-start border-b border-gray-200">
-                <nav className="w-full">
-                  {showSidebar && <SidebarTrigger />}
+                <nav className="w-full flex items-center">
+                  {showSidebar && <SidebarTrigger className="mr-4" />}
                   <DesktopMenu />
                   <MobileMenu />
                 </nav>
               </header>
-              <main>{children}</main>
+              <main className="flex-grow overflow-auto p-4 md:p-8 max-w-full">{children}</main>
               <Footer />
             </div>
           </div>
