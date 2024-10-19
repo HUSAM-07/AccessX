@@ -90,13 +90,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="flex justify-between items-center p-4 md:px-8 md:justify-start border-b border-gray-200">
+        <header className="flex justify-between items-center p-4 md:px-8 border-b border-gray-200">
           <nav className="w-full">
             <DesktopMenu />
             <MobileMenu />
           </nav>
         </header>
-        <main>{children}</main>
+        <main className="max-w-full px-4 md:px-8">{children}</main>
         <Footer />
       </body>
     </html>
