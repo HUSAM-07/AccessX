@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+'use client';
+
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/app/components/custom/Footer";
@@ -7,13 +8,11 @@ import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuIte
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/app-sidebar";
+import { usePathname } from 'next/navigation';
 
 const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "UniDash",
-  description: "Start your saving hours daily!",
-};
 
 function DesktopMenu() {
   return (
@@ -87,17 +86,28 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+  const showSidebar = !['/'].includes(pathname);
+
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="flex justify-between items-center p-4 md:px-8 md:justify-start border-b border-gray-200">
-          <nav className="w-full">
-            <DesktopMenu />
-            <MobileMenu />
-          </nav>
-        </header>
-        <main>{children}</main>
-        <Footer />
+        <SidebarProvider>
+          <div className="flex">
+            {showSidebar && <AppSidebar />}
+            <div className="flex-1">
+              <header className="flex justify-between items-center p-4 md:px-8 md:justify-start border-b border-gray-200">
+                <nav className="w-full">
+                  {showSidebar && <SidebarTrigger />}
+                  <DesktopMenu />
+                  <MobileMenu />
+                </nav>
+              </header>
+              <main>{children}</main>
+              <Footer />
+            </div>
+          </div>
+        </SidebarProvider>
       </body>
     </html>
   );
