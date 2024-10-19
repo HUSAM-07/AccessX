@@ -104,7 +104,7 @@ export default function RootLayout({
                 </nav>
               </header>
               <main className="flex-grow overflow-auto w-full">
-                <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-8">
+                <div className="w-full max-w-full mx-auto px-4 sm:px-6 md:px-8 py-8">
                   {children}
                 </div>
               </main>
