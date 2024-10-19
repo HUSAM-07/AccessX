@@ -95,15 +95,19 @@ export default function RootLayout({
         <SidebarProvider>
           <div className="flex h-screen">
             {showSidebar && <AppSidebar />}
-            <div className="flex flex-col flex-grow overflow-hidden">
-              <header className="flex justify-between items-center p-4 md:px-8 md:justify-start border-b border-gray-200">
+            <div className="flex flex-col flex-grow w-full">
+              <header className="flex justify-between items-center p-4 md:px-8 border-b border-gray-200">
                 <nav className="w-full flex items-center">
                   {showSidebar && <SidebarTrigger className="mr-4" />}
                   <DesktopMenu />
                   <MobileMenu />
                 </nav>
               </header>
-              <main className="flex-grow overflow-auto p-4 md:p-8 max-w-full">{children}</main>
+              <main className="flex-grow overflow-auto w-full">
+                <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-8">
+                  {children}
+                </div>
+              </main>
               <Footer />
             </div>
           </div>
