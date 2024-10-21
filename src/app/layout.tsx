@@ -71,7 +71,7 @@ function MobileMenu() {
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
           <Button asChild variant="outline" className="w-full justify-start">
-            <a href="/career" className="inline-flex items-center w-full">
+            <a href="/career" className="inline-flex items-left w-full">
               Career Guidance
               <ArrowRightIcon className="ml-2 h-4 w-4" />
             </a>
