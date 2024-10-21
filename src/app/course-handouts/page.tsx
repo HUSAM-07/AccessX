@@ -1,4 +1,6 @@
-import { CourseHandoutsTable } from '@/components/CourseHandoutsTable'
+import dynamic from 'next/dynamic'
+
+const CourseHandoutsTable = dynamic(() => import('@/components/CourseHandoutsTable').then((mod) => mod.CourseHandoutsTable), { ssr: false })
 
 export default function CourseHandoutsPage() {
   return (
