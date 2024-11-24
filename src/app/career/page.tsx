@@ -110,7 +110,7 @@ export default function CareerPage() {
       <div className="relative mb-16">
         <div className="absolute inset-0 bg-gradient-to-r from-[#fc4707] to-[#ffa07a] opacity-10 blur-3xl rounded-3xl"></div>
         <div className="relative">
-          <span className="inline-block bg-[#fc4707] text-white text-sm px-4 py-1 rounded-full mb-4">We're Hiring!</span>
+          <span className="inline-block bg-[#fc4707] text-white text-sm px-4 py-1 rounded-full mb-4">We're helping you get hired!</span>
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">Career Services Division</h1>
           <p className="text-gray-600 text-lg max-w-2xl">
             We're looking for passionate people to join us on our mission. We value clear communication, and full ownership and responsibility.
