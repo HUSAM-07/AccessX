@@ -2,6 +2,9 @@
 
 UniDash is a web application designed to consolidate university portals and websites into a single, accessible platform. It's specifically tailored for BITS Pilani Dubai Campus, helping students and faculty easily navigate and find information from various university resources.
 
+## We're soon starting an Open Sources Issue Series
+| Hold tight while we make it easy for you to be a part of the UniDash Contributors List
+
 ## Table of Contents
 
 1. [Technologies Used](#technologies-used)
@@ -50,3 +53,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
