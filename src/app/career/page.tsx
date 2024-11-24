@@ -108,9 +108,9 @@ export default function CareerPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="relative mb-16">
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-50 to-blue-50 opacity-20 blur-3xl rounded-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#fc4707] to-[#ffa07a] opacity-10 blur-3xl rounded-3xl"></div>
         <div className="relative">
-          <span className="inline-block bg-black text-white text-sm px-4 py-1 rounded-full mb-4">We're Hiring!</span>
+          <span className="inline-block bg-[#fc4707] text-white text-sm px-4 py-1 rounded-full mb-4">We're Hiring!</span>
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">Career Services Division</h1>
           <p className="text-gray-600 text-lg max-w-2xl">
             We're looking for passionate people to join us on our mission. We value clear communication, and full ownership and responsibility.
@@ -124,7 +124,7 @@ export default function CareerPage() {
           <a
             key={section.id}
             href={`#${section.id}`}
-            className="inline-flex px-4 py-2 rounded-full text-sm bg-gray-100 hover:bg-gray-200 transition-colors"
+            className="inline-flex px-4 py-2 rounded-full text-sm bg-gray-100 hover:bg-[#fc4707] hover:text-white transition-colors"
           >
             {section.title}
           </a>
@@ -135,12 +135,12 @@ export default function CareerPage() {
       <section id="about" className="mb-16">
         <h2 className="text-2xl font-semibold mb-6">What We Are</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+          <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-[#fc4707] transition-colors">
             <p className="text-gray-600">
               The Career Services Division at BITS Pilani Dubai plays a pivotal role in facilitating career opportunities for students in their final years and after graduation. We foster strong industry partnerships to bring a wide range of employment options.
             </p>
           </div>
-          <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+          <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-[#fc4707] transition-colors">
             <p className="text-gray-600">
               Our flagship event, the BITS Career Fair, takes place during the second semester each year, attracting over 70 companies from various sectors to recruit students from all disciplines.
             </p>
@@ -151,7 +151,7 @@ export default function CareerPage() {
       {/* Resume Building Tips Section */}
       <section id="resume-tips" className="mb-16">
         <h2 className="text-2xl font-semibold mb-6">Resume Building Tips</h2>
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:border-[#fc4707] transition-colors">
           <div className="p-8">
             <div className="max-w-3xl">
               <h3 className="text-xl font-semibold mb-4">Create a Winning Resume</h3>
@@ -162,9 +162,9 @@ export default function CareerPage() {
               <div className="flex flex-col sm:flex-row gap-6">
                 <ShimmerButton
                   onClick={() => window.open('/Resume Building Process.pdf', '_blank')}
-                  shimmerColor="#000000"
-                  background="linear-gradient(135deg, #000000 0%, #333333 100%)"
-                  className="font-medium px-6 py-2 rounded-full"
+                  shimmerColor="#ffffff"
+                  background="linear-gradient(135deg, #fc4707 0%, #ff6b3d 100%)"
+                  className="font-medium px-6 py-2 rounded-full text-white"
                 >
                   Download Resume Guide
                 </ShimmerButton>
@@ -174,19 +174,19 @@ export default function CareerPage() {
           <div className="bg-gray-50 p-8 border-t border-gray-100">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex items-center gap-3">
-                <div className="w-2 h-2 rounded-full bg-black"></div>
+                <div className="w-2 h-2 rounded-full bg-[#fc4707]"></div>
                 <span className="text-gray-600">Professional formatting templates</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-2 h-2 rounded-full bg-black"></div>
+                <div className="w-2 h-2 rounded-full bg-[#fc4707]"></div>
                 <span className="text-gray-600">Action words and power phrases</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-2 h-2 rounded-full bg-black"></div>
+                <div className="w-2 h-2 rounded-full bg-[#fc4707]"></div>
                 <span className="text-gray-600">Industry-specific examples</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-2 h-2 rounded-full bg-black"></div>
+                <div className="w-2 h-2 rounded-full bg-[#fc4707]"></div>
                 <span className="text-gray-600">Common mistakes to avoid</span>
               </div>
             </div>
@@ -197,7 +197,7 @@ export default function CareerPage() {
       {/* Companies Section */}
       <section id="companies" className="mb-16">
         <h2 className="text-2xl font-semibold mb-6">List of Companies</h2>
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:border-[#fc4707] transition-colors">
           <div className="p-6">
             <div className="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4">
               <p className="text-sm text-gray-500">
@@ -209,7 +209,7 @@ export default function CareerPage() {
                     variant="outline"
                     role="combobox"
                     aria-expanded={open}
-                    className="w-[200px] justify-between rounded-full"
+                    className="w-[200px] justify-between rounded-full hover:border-[#fc4707] hover:text-[#fc4707] transition-colors"
                   >
                     {value
                       ? sortOptions.find((option) => option.value === value)?.label
@@ -280,7 +280,7 @@ export default function CareerPage() {
                   onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
                   disabled={currentPage === 1}
                   className={cn(
-                    "px-4 py-2 text-sm rounded-full border border-gray-200",
+                    "px-4 py-2 text-sm rounded-full border border-gray-200 hover:border-[#fc4707] hover:text-[#fc4707] transition-colors",
                     currentPage === 1 
                       ? "opacity-50 cursor-not-allowed" 
                       : "hover:bg-gray-50 cursor-pointer"
@@ -292,7 +292,7 @@ export default function CareerPage() {
                   onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
                   disabled={currentPage === totalPages}
                   className={cn(
-                    "px-4 py-2 text-sm rounded-full border border-gray-200",
+                    "px-4 py-2 text-sm rounded-full border border-gray-200 hover:border-[#fc4707] hover:text-[#fc4707] transition-colors",
                     currentPage === totalPages 
                       ? "opacity-50 cursor-not-allowed" 
                       : "hover:bg-gray-50 cursor-pointer"
