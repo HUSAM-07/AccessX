@@ -40,7 +40,6 @@ import {
 } from "@/components/ui/pagination"
 
 const sortOptions = [
-  { value: "stipend_high_low", label: "Stipend: High to Low" },
   { value: "ps1", label: "PS-1" },
   { value: "ps2", label: "PS-2" },
 ]
@@ -69,16 +68,10 @@ export default function CareerPage() {
     
     let sorted = [...companies];
     
-    if (value === "stipend_high_low") {
-      sorted.sort((a, b) => {
-        const stipendA = parseInt(a.Stipend.replace(/[^0-9]/g, '')) || 0;
-        const stipendB = parseInt(b.Stipend.replace(/[^0-9]/g, '')) || 0;
-        return stipendB - stipendA;
-      });
-    } else if (value === "ps1") {
-      sorted = sorted.filter(company => company["Hires In"].includes("PS-1"));
+    if (value === "ps1") {
+      sorted = sorted.filter(company => company["Hires In"].toLowerCase().includes("ps-1"));
     } else if (value === "ps2") {
-      sorted = sorted.filter(company => company["Hires In"].includes("PS-2"));
+      sorted = sorted.filter(company => company["Hires In"].toLowerCase().includes("ps-2"));
     }
     
     return sorted;
@@ -215,16 +208,16 @@ export default function CareerPage() {
                     className="w-[200px] justify-between rounded-full hover:border-[#fc4707] hover:text-[#fc4707] transition-colors"
                   >
                     {value
-                      ? sortOptions.find((option) => option.value === value)?.label
-                      : "Filter by"}
+                      ? `Filter: ${sortOptions.find((option) => option.value === value)?.label}`
+                      : "Filter by PS Type"}
                     <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                   </Button>
                 </PopoverTrigger>
                 <PopoverContent className="w-[200px] p-0" align="end">
                   <Command>
-                    <CommandInput placeholder="Search filters..." />
-                    <CommandEmpty>No filter found.</CommandEmpty>
-                    <CommandGroup>
+                    <CommandInput placeholder="Search PS type..." />
+                    <CommandEmpty>No PS type found.</CommandEmpty>
+                    <CommandGroup heading="Practice School Type">
                       {sortOptions.map((option) => (
                         <CommandItem
                           key={option.value}
