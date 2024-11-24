@@ -30,6 +30,7 @@ import {
 } from "@/components/ui/table"
 import useSWR from 'swr'
 import Papa from 'papaparse'
+import ShimmerButton from '@/components/magicui/shimmer-button'
 
 const sortOptions = [
   { value: "stipend_high_low", label: "Stipend: High to Low" },
@@ -81,6 +82,7 @@ export default function CareerPage() {
     { id: "about", title: "What We Are" },
     { id: "vision-mission", title: "Our Vision and Mission" },
     { id: "support", title: "Support We Offer" },
+    { id: "resume-tips", title: "Resume Building Tips" },
     { id: "companies", title: "List of Companies" },
   ]
 
@@ -166,6 +168,50 @@ export default function CareerPage() {
           default_velocity={2}
           className="font-display text-center text-2xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-4xl md:leading-[3rem]"
         />
+      </section>
+
+      <Separator className="my-8" />
+
+      {/* Resume Building Tips Section */}
+      <section id="resume-tips" className="mb-12">
+        <h2 className="text-2xl font-semibold mb-4">Resume Building Tips</h2>
+        <div className="bg-gradient-to-br from-purple-50 to-blue-50 p-8 rounded-xl shadow-md">
+          <div className="max-w-3xl mx-auto">
+            <h3 className="text-xl font-semibold mb-4 text-purple-800">Create a Winning Resume</h3>
+            <p className="text-gray-700 mb-6">
+              Download our comprehensive guide to crafting a professional resume that stands out. 
+              Learn about formatting best practices, essential sections, and industry-specific tips.
+            </p>
+            <div className="flex justify-center">
+              <ShimmerButton
+                onClick={() => window.open('/resume-tips.pdf', '_blank')}
+                shimmerColor="#8B5CF6"
+                background="linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%)"
+                className="font-semibold"
+              >
+                Download Resume Guide
+              </ShimmerButton>
+            </div>
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600">
+              <div className="flex items-start space-x-2">
+                <span className="text-purple-600">•</span>
+                <span>Professional formatting templates</span>
+              </div>
+              <div className="flex items-start space-x-2">
+                <span className="text-purple-600">•</span>
+                <span>Action words and power phrases</span>
+              </div>
+              <div className="flex items-start space-x-2">
+                <span className="text-purple-600">•</span>
+                <span>Industry-specific examples</span>
+              </div>
+              <div className="flex items-start space-x-2">
+                <span className="text-purple-600">•</span>
+                <span>Common mistakes to avoid</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <Separator className="my-8" />
