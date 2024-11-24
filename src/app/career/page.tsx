@@ -31,6 +31,14 @@ import {
 import useSWR from 'swr'
 import Papa from 'papaparse'
 import ShimmerButton from '@/components/magicui/shimmer-button'
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination"
 
 const sortOptions = [
   { value: "stipend_high_low", label: "Stipend: High to Low" },
@@ -53,6 +61,8 @@ const fetcher = (url: string) => fetch(url).then((res) => res.text()).then((data
 export default function CareerPage() {
   const [open, setOpen] = useState(false)
   const [value, setValue] = useState("")
+  const [currentPage, setCurrentPage] = useState(1)
+  const companiesPerPage = 5
   const { data: companies, error } = useSWR<Company[]>('/companies.csv', fetcher)
 
   const sortedCompanies = useMemo(() => {
@@ -74,6 +84,15 @@ export default function CareerPage() {
     
     return sorted;
   }, [companies, value]);
+
+  const paginatedCompanies = useMemo(() => {
+    const startIndex = (currentPage - 1) * companiesPerPage
+    return sortedCompanies.slice(startIndex, startIndex + companiesPerPage)
+  }, [sortedCompanies, currentPage])
+
+  const totalPages = useMemo(() => {
+    return Math.ceil(sortedCompanies.length / companiesPerPage)
+  }, [sortedCompanies])
 
   if (error) return <div>Failed to load</div>
   if (!companies) return <div>Loading...</div>
@@ -175,38 +194,38 @@ export default function CareerPage() {
       {/* Resume Building Tips Section */}
       <section id="resume-tips" className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">Resume Building Tips</h2>
-        <div className="bg-gradient-to-br from-purple-50 to-blue-50 p-8 rounded-xl shadow-md">
+        <div className="bg-white p-6 md:p-8 rounded-xl shadow-md border border-gray-200">
           <div className="max-w-3xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4 text-purple-800">Create a Winning Resume</h3>
+            <h3 className="text-xl font-semibold mb-4 text-gray-900">Create a Winning Resume</h3>
             <p className="text-gray-700 mb-6">
               Download our comprehensive guide to crafting a professional resume that stands out. 
               Learn about formatting best practices, essential sections, and industry-specific tips.
             </p>
             <div className="flex justify-center">
               <ShimmerButton
-                onClick={() => window.open('/resume-tips.pdf', '_blank')}
-                shimmerColor="#8B5CF6"
-                background="linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%)"
-                className="font-semibold"
+                onClick={() => window.open('/Resume Building Process.pdf', '_blank')}
+                shimmerColor="#000000"
+                background="linear-gradient(135deg, #2D2D2D 0%, #000000 100%)"
+                className="font-semibold w-full sm:w-auto px-8"
               >
                 Download Resume Guide
               </ShimmerButton>
             </div>
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600">
-              <div className="flex items-start space-x-2">
-                <span className="text-purple-600">•</span>
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-600">
+              <div className="flex items-start space-x-2 bg-gray-50 p-3 rounded-lg">
+                <span className="text-black">•</span>
                 <span>Professional formatting templates</span>
               </div>
-              <div className="flex items-start space-x-2">
-                <span className="text-purple-600">•</span>
+              <div className="flex items-start space-x-2 bg-gray-50 p-3 rounded-lg">
+                <span className="text-black">•</span>
                 <span>Action words and power phrases</span>
               </div>
-              <div className="flex items-start space-x-2">
-                <span className="text-purple-600">•</span>
+              <div className="flex items-start space-x-2 bg-gray-50 p-3 rounded-lg">
+                <span className="text-black">•</span>
                 <span>Industry-specific examples</span>
               </div>
-              <div className="flex items-start space-x-2">
-                <span className="text-purple-600">•</span>
+              <div className="flex items-start space-x-2 bg-gray-50 p-3 rounded-lg">
+                <span className="text-black">•</span>
                 <span>Common mistakes to avoid</span>
               </div>
             </div>
@@ -290,21 +309,49 @@ export default function CareerPage() {
                   <TableRow>
                     <TableHead>Company Name</TableHead>
                     <TableHead>Stipend</TableHead>
-                    <TableHead>Common Roles</TableHead>
-                    <TableHead>Hires In</TableHead>
+                    <TableHead className="hidden md:table-cell">Common Roles</TableHead>
+                    <TableHead className="hidden md:table-cell">Hires In</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {sortedCompanies.map((company) => (
+                  {paginatedCompanies.map((company) => (
                     <TableRow key={company["Company Name"]}>
                       <TableCell>{company["Company Name"]}</TableCell>
                       <TableCell>{company.Stipend}</TableCell>
-                      <TableCell>{company["Common Roles"]}</TableCell>
-                      <TableCell>{company["Hires In"]}</TableCell>
+                      <TableCell className="hidden md:table-cell">{company["Common Roles"]}</TableCell>
+                      <TableCell className="hidden md:table-cell">{company["Hires In"]}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
               </Table>
+              <div className="mt-4">
+                <Pagination>
+                  <PaginationContent>
+                    <PaginationItem>
+                      <PaginationPrevious 
+                        onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+                        className={currentPage === 1 ? "pointer-events-none opacity-50" : ""}
+                      />
+                    </PaginationItem>
+                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                      <PaginationItem key={page}>
+                        <PaginationLink
+                          onClick={() => setCurrentPage(page)}
+                          isActive={currentPage === page}
+                        >
+                          {page}
+                        </PaginationLink>
+                      </PaginationItem>
+                    ))}
+                    <PaginationItem>
+                      <PaginationNext
+                        onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+                        className={currentPage === totalPages ? "pointer-events-none opacity-50" : ""}
+                      />
+                    </PaginationItem>
+                  </PaginationContent>
+                </Pagination>
+              </div>
             </div>
           </div>
         </div>
