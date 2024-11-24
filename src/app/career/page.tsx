@@ -106,166 +106,110 @@ export default function CareerPage() {
   ]
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">Career Services Division</h1>
-      
-      {/* Navigation */}
-      <nav className="mb-8">
-        <ul className="flex flex-wrap justify-center gap-2 md:gap-4">
-          {sections.map((section, index) => (
-            <React.Fragment key={section.id}>
-              {index > 0 && (
-                <Separator orientation="vertical" className="h-6 hidden md:block" />
-              )}
-              <li>
-                <a
-                  href={`#${section.id}`}
-                  className="text-sm md:text-base text-gray-600 hover:text-gray-900 transition-colors relative group"
-                >
-                  {section.title}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 transition-all group-hover:w-full"></span>
-                </a>
-              </li>
-            </React.Fragment>
-          ))}
-        </ul>
-      </nav>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="relative mb-16">
+        <div className="absolute inset-0 bg-gradient-to-r from-pink-50 to-blue-50 opacity-20 blur-3xl rounded-3xl"></div>
+        <div className="relative">
+          <span className="inline-block bg-black text-white text-sm px-4 py-1 rounded-full mb-4">We're Hiring!</span>
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4">Career Services Division</h1>
+          <p className="text-gray-600 text-lg max-w-2xl">
+            We're looking for passionate people to join us on our mission. We value clear communication, and full ownership and responsibility.
+          </p>
+        </div>
+      </div>
 
-      <Separator className="my-8" />
-      
+      {/* Navigation Pills */}
+      <div className="flex flex-wrap gap-2 mb-12 justify-start">
+        {sections.map((section) => (
+          <a
+            key={section.id}
+            href={`#${section.id}`}
+            className="inline-flex px-4 py-2 rounded-full text-sm bg-gray-100 hover:bg-gray-200 transition-colors"
+          >
+            {section.title}
+          </a>
+        ))}
+      </div>
+
       {/* About CSD Section */}
-      <section id="about" className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">What We Are</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white p-6 rounded-xl shadow-md">
-            <p className="text-gray-700 mb-4">
-              The Career Services Division at BITS Pilani Dubai plays a pivotal role in facilitating career opportunities for students in their final years and after graduation. We foster strong industry partnerships to bring a wide range of employment options, including full-time, part-time, and internship positions.
-            </p>
-            <p className="text-gray-700">
-              Over the years, we&apos;ve supported numerous BITS alumni in developing essential soft and hard skills through workshops, talks, and seminars that prepare them for the professional world.
+      <section id="about" className="mb-16">
+        <h2 className="text-2xl font-semibold mb-6">What We Are</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+            <p className="text-gray-600">
+              The Career Services Division at BITS Pilani Dubai plays a pivotal role in facilitating career opportunities for students in their final years and after graduation. We foster strong industry partnerships to bring a wide range of employment options.
             </p>
           </div>
-          <div className="bg-white p-6 rounded-xl shadow-md">
-            <p className="text-gray-700 mb-4">
-              Our flagship event, the BITS Career Fair, takes place during the second semester each year, attracting over 70 companies from various sectors to recruit students from all disciplines. Additionally, the Startup Career Fair, held in February, focuses on connecting startups with pre-final and final-year students for both short-term and long-term roles.
-            </p>
-            <p className="text-gray-700">
-              We also organize various sessions at our Center for Higher Education, providing students aspiring to pursue higher studies the opportunity to engage with representatives and admission officers from leading global universities.
+          <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+            <p className="text-gray-600">
+              Our flagship event, the BITS Career Fair, takes place during the second semester each year, attracting over 70 companies from various sectors to recruit students from all disciplines.
             </p>
           </div>
         </div>
       </section>
-
-      <Separator className="my-8" />
-
-      {/* Vision and Mission Section */}
-      <section id="vision-mission" className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Our Vision and Mission</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-blue-50 p-6 rounded-xl shadow-md">
-            <h2 className="text-2xl font-semibold mb-4 text-blue-700">Vision</h2>
-            <p className="text-gray-700">
-              To empower students to explore and pursue meaningful and fulfilling career paths by providing comprehensive career services.
-            </p>
-          </div>
-          <div className="bg-green-50 p-6 rounded-xl shadow-md">
-            <h2 className="text-2xl font-semibold mb-4 text-green-700">Mission</h2>
-            <p className="text-gray-700">
-              To provide exceptional career counselling, coaching, and resources to support students in their career development journey.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <Separator className="my-8" />
-
-      {/* Support We Offer Section */}
-      <section id="support" className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Support We Offer</h2>
-        <VelocityScroll
-          text="Career Guidance • Career Talks & Workshops • Campus Placement Program • Career Readiness Programs • Career Fairs • Higher Education Support • "
-          default_velocity={2}
-          className="font-display text-center text-2xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-4xl md:leading-[3rem]"
-        />
-      </section>
-
-      <Separator className="my-8" />
 
       {/* Resume Building Tips Section */}
-      <section id="resume-tips" className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Resume Building Tips</h2>
-        <div className="bg-white p-6 md:p-8 rounded-xl shadow-md border border-gray-200">
-          <div className="max-w-3xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4 text-gray-900">Create a Winning Resume</h3>
-            <p className="text-gray-700 mb-6">
-              Download our comprehensive guide to crafting a professional resume that stands out. 
-              Learn about formatting best practices, essential sections, and industry-specific tips.
-            </p>
-            <div className="flex justify-center">
-              <ShimmerButton
-                onClick={() => window.open('/Resume Building Process.pdf', '_blank')}
-                shimmerColor="#000000"
-                background="linear-gradient(135deg, #2D2D2D 0%, #000000 100%)"
-                className="font-semibold w-full sm:w-auto px-8"
-              >
-                Download Resume Guide
-              </ShimmerButton>
+      <section id="resume-tips" className="mb-16">
+        <h2 className="text-2xl font-semibold mb-6">Resume Building Tips</h2>
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+          <div className="p-8">
+            <div className="max-w-3xl">
+              <h3 className="text-xl font-semibold mb-4">Create a Winning Resume</h3>
+              <p className="text-gray-600 mb-8">
+                Download our comprehensive guide to crafting a professional resume that stands out. 
+                Learn about formatting best practices, essential sections, and industry-specific tips.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-6">
+                <ShimmerButton
+                  onClick={() => window.open('/Resume Building Process.pdf', '_blank')}
+                  shimmerColor="#000000"
+                  background="linear-gradient(135deg, #000000 0%, #333333 100%)"
+                  className="font-medium px-6 py-2 rounded-full"
+                >
+                  Download Resume Guide
+                </ShimmerButton>
+              </div>
             </div>
-            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-600">
-              <div className="flex items-start space-x-2 bg-gray-50 p-3 rounded-lg">
-                <span className="text-black">•</span>
-                <span>Professional formatting templates</span>
+          </div>
+          <div className="bg-gray-50 p-8 border-t border-gray-100">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 rounded-full bg-black"></div>
+                <span className="text-gray-600">Professional formatting templates</span>
               </div>
-              <div className="flex items-start space-x-2 bg-gray-50 p-3 rounded-lg">
-                <span className="text-black">•</span>
-                <span>Action words and power phrases</span>
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 rounded-full bg-black"></div>
+                <span className="text-gray-600">Action words and power phrases</span>
               </div>
-              <div className="flex items-start space-x-2 bg-gray-50 p-3 rounded-lg">
-                <span className="text-black">•</span>
-                <span>Industry-specific examples</span>
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 rounded-full bg-black"></div>
+                <span className="text-gray-600">Industry-specific examples</span>
               </div>
-              <div className="flex items-start space-x-2 bg-gray-50 p-3 rounded-lg">
-                <span className="text-black">•</span>
-                <span>Common mistakes to avoid</span>
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 rounded-full bg-black"></div>
+                <span className="text-gray-600">Common mistakes to avoid</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <Separator className="my-8" />
-
       {/* Companies Section */}
-      <section id="companies">
+      <section id="companies" className="mb-16">
         <h2 className="text-2xl font-semibold mb-6">List of Companies</h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-          <div className="bg-gray-50 p-6 rounded-xl border-2 border-gray-200">
-            <div className="w-full h-64 relative mb-4">
-              <Image
-                src="/cdc_illustration.svg"
-                alt="Career Services Division Illustration"
-                layout="fill"
-                objectFit="contain"
-              />
-            </div>
-            <h2 className="text-xl font-semibold mb-2">Career Services Division</h2>
-            <p className="text-sm text-gray-600 mb-4">
-              We help you in bringing clarity in your application process
-            </p>
-            <p className="text-xs text-gray-500">
-              All details and resources provided here, is a part of an initiative by the author and the Career Services Division
-            </p>
-          </div>
-          <div>
-            <div className="flex flex-col sm:flex-row justify-between items-center mb-4">
-              <p className="text-sm text-gray-600 mb-2 sm:mb-0">Found {sortedCompanies.length} companies.</p>
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+          <div className="p-6">
+            <div className="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4">
+              <p className="text-sm text-gray-500">
+                Found {sortedCompanies.length} companies
+              </p>
               <Popover open={open} onOpenChange={setOpen}>
                 <PopoverTrigger asChild>
                   <Button
                     variant="outline"
                     role="combobox"
                     aria-expanded={open}
-                    className="w-[200px] justify-between"
+                    className="w-[200px] justify-between rounded-full"
                   >
                     {value
                       ? sortOptions.find((option) => option.value === value)?.label
@@ -303,20 +247,21 @@ export default function CareerPage() {
                 </PopoverContent>
               </Popover>
             </div>
-            <div className="overflow-x-auto">
+            
+            <div className="border rounded-xl overflow-hidden">
               <Table>
                 <TableHeader>
-                  <TableRow>
-                    <TableHead>Company Name</TableHead>
-                    <TableHead>Stipend</TableHead>
-                    <TableHead className="hidden md:table-cell">Common Roles</TableHead>
-                    <TableHead className="hidden md:table-cell">Hires In</TableHead>
+                  <TableRow className="bg-gray-50">
+                    <TableHead className="font-medium">Company Name</TableHead>
+                    <TableHead className="font-medium">Stipend</TableHead>
+                    <TableHead className="font-medium hidden md:table-cell">Common Roles</TableHead>
+                    <TableHead className="font-medium hidden md:table-cell">Hires In</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
                   {paginatedCompanies.map((company) => (
-                    <TableRow key={company["Company Name"]}>
-                      <TableCell>{company["Company Name"]}</TableCell>
+                    <TableRow key={company["Company Name"]} className="hover:bg-gray-50">
+                      <TableCell className="font-medium">{company["Company Name"]}</TableCell>
                       <TableCell>{company.Stipend}</TableCell>
                       <TableCell className="hidden md:table-cell">{company["Common Roles"]}</TableCell>
                       <TableCell className="hidden md:table-cell">{company["Hires In"]}</TableCell>
@@ -324,42 +269,44 @@ export default function CareerPage() {
                   ))}
                 </TableBody>
               </Table>
-              <div className="mt-4">
-                <Pagination>
-                  <PaginationContent>
-                    <PaginationItem>
-                      <PaginationPrevious 
-                        onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
-                        className={currentPage === 1 ? "pointer-events-none opacity-50" : ""}
-                      />
-                    </PaginationItem>
-                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                      <PaginationItem key={page}>
-                        <PaginationLink
-                          onClick={() => setCurrentPage(page)}
-                          isActive={currentPage === page}
-                        >
-                          {page}
-                        </PaginationLink>
-                      </PaginationItem>
-                    ))}
-                    <PaginationItem>
-                      <PaginationNext
-                        onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
-                        className={currentPage === totalPages ? "pointer-events-none opacity-50" : ""}
-                      />
-                    </PaginationItem>
-                  </PaginationContent>
-                </Pagination>
+            </div>
+
+            <div className="mt-6 flex justify-between items-center">
+              <div className="text-sm text-gray-500">
+                Showing {Math.min(companiesPerPage, sortedCompanies.length)} of {sortedCompanies.length} companies
+              </div>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+                  disabled={currentPage === 1}
+                  className={cn(
+                    "px-4 py-2 text-sm rounded-full border border-gray-200",
+                    currentPage === 1 
+                      ? "opacity-50 cursor-not-allowed" 
+                      : "hover:bg-gray-50 cursor-pointer"
+                  )}
+                >
+                  Previous
+                </button>
+                <button
+                  onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+                  disabled={currentPage === totalPages}
+                  className={cn(
+                    "px-4 py-2 text-sm rounded-full border border-gray-200",
+                    currentPage === totalPages 
+                      ? "opacity-50 cursor-not-allowed" 
+                      : "hover:bg-gray-50 cursor-pointer"
+                  )}
+                >
+                  Next
+                </button>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <Separator className="my-8" />
-
-      <div className="text-center text-sm text-gray-500 mt-8">
+      <div className="text-center text-sm text-gray-500">
         <p>All the companies listed are potential companies that have been reported to come for recruitment season every year.</p>
       </div>
     </div>
