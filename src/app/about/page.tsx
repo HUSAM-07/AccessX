@@ -1,42 +1,104 @@
-import React from 'react';
-import ShimmerButton from '@/components/magicui/shimmer-button';
-import Image from 'next/image';
+import Image from "next/image";
+import ShimmerButton from "@/components/magicui/shimmer-button";
 
 export default function AboutPage() {
   return (
-    <div className="w-full max-w-4xl mx-auto mt-8 px-4 sm:px-6 md:px-8">
-      <h2 className="text-2xl font-bold mb-4">About UniDash</h2>
-      <p className="mb-4 text-sm sm:text-base">
-        UniDash is a web application designed to consolidate university portals and websites into a single, accessible platform. Our goal is to help students and faculty easily navigate and find the information they need from various universities.
-      </p>
-      <p className="text-xl font-bold mb-4">
-        With UniDash, You Can:
-      </p>
-      <ul className="list-disc list-inside mb-4 text-sm sm:text-base">
-        <li>Find all university portals in a single page(LMS, ERP, BITS Library, Association resources and notes compiled by students)</li>
-        <li>In-built attendance tracker</li>
-        <li>Find tools and resources to help you with your university life</li>
-        <li><strong>Find all the course handouts in a single place</strong></li>
-        <li><strong>Career Guidance & Practice School Resources</strong></li>
-      </ul>
-      <div className="mb-6 flex justify-center">
-        <Image
-          src="/UniDash_Thumbnail.png"
-          alt="UniDash Dashboard"
-          width={600}
-          height={400}
-          className="rounded-lg shadow-lg max-w-full h-auto"
-        />
+    <div className="w-full max-w-5xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+      {/* Header Section */}
+      <div className="text-center mb-16">
+        <h1 className="text-3xl font-bold mb-4">Frequently asked questions</h1>
+        <p className="text-gray-600">Everything you need to know about UniDash and its features.</p>
       </div>
-      <div className="flex justify-center">
-        <a href="https://www.mohammedhusamuddin.me/" target="_blank" rel="noopener noreferrer">
-          <ShimmerButton className="shadow-2xl">
-            <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-              About Author
-            </span>
+
+      {/* FAQ Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        {/* What is UniDash? */}
+        <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:border-[#fc4707] transition-colors">
+          <h3 className="text-lg font-semibold mb-4">What is UniDash?</h3>
+          <p className="text-gray-600">
+            UniDash is a web application designed to consolidate university portals and websites into a single, accessible platform. Our goal is to help students and faculty easily navigate and find the information they need from various universities.
+          </p>
+        </div>
+
+        {/* What can you do with UniDash? */}
+        <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:border-[#fc4707] transition-colors">
+          <h3 className="text-lg font-semibold mb-4">What can you do with UniDash?</h3>
+          <ul className="space-y-3 text-gray-600">
+            <li className="flex items-center gap-3">
+              <div className="w-2 h-2 rounded-full bg-[#fc4707]"></div>
+              <span>Find all university portals in a single page</span>
+            </li>
+            <li className="flex items-center gap-3">
+              <div className="w-2 h-2 rounded-full bg-[#fc4707]"></div>
+              <span>Track your attendance with built-in tools</span>
+            </li>
+            <li className="flex items-center gap-3">
+              <div className="w-2 h-2 rounded-full bg-[#fc4707]"></div>
+              <span>Access course handouts in one place</span>
+            </li>
+            <li className="flex items-center gap-3">
+              <div className="w-2 h-2 rounded-full bg-[#fc4707]"></div>
+              <span>Get career guidance & practice school resources</span>
+            </li>
+          </ul>
+        </div>
+
+        {/* Available Resources */}
+        <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:border-[#fc4707] transition-colors">
+          <h3 className="text-lg font-semibold mb-4">What resources are available?</h3>
+          <ul className="space-y-3 text-gray-600">
+            <li className="flex items-center gap-3">
+              <div className="w-2 h-2 rounded-full bg-[#fc4707]"></div>
+              <span>LMS & ERP access</span>
+            </li>
+            <li className="flex items-center gap-3">
+              <div className="w-2 h-2 rounded-full bg-[#fc4707]"></div>
+              <span>Student-contributed course notes</span>
+            </li>
+            <li className="flex items-center gap-3">
+              <div className="w-2 h-2 rounded-full bg-[#fc4707]"></div>
+              <span>Google DSC & ACM resources</span>
+            </li>
+            <li className="flex items-center gap-3">
+              <div className="w-2 h-2 rounded-full bg-[#fc4707]"></div>
+              <span>Association resources and compiled notes</span>
+            </li>
+          </ul>
+        </div>
+
+        {/* Preview Image */}
+        <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:border-[#fc4707] transition-colors">
+          <div className="relative h-[200px] mb-4 rounded-lg overflow-hidden">
+            <Image
+              src="/UniDash_Thumbnail.png"
+              alt="UniDash Dashboard"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <p className="text-gray-600 text-sm">
+            A glimpse of the UniDash interface - your all-in-one university resource hub
+          </p>
+        </div>
+      </div>
+
+      {/* Author Button */}
+      <div className="text-center">
+        <a 
+          href="https://www.mohammedhusamuddin.me/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="inline-block"
+        >
+          <ShimmerButton
+            shimmerColor="#ffffff"
+            background="linear-gradient(135deg, #fc4707 0%, #ff6b3d 100%)"
+            className="font-medium px-6 py-2 rounded-lg text-white"
+          >
+            About Author
           </ShimmerButton>
         </a>
       </div>
     </div>
-  )
+  );
 }
