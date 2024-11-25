@@ -248,7 +248,7 @@ export default function CareerPage() {
                         background="linear-gradient(135deg, #fc4707 0%, #ff6b3d 100%)"
                         className="font-medium px-4 py-2 rounded-full text-white text-sm w-full sm:w-auto"
                       >
-                        Schedule with Expert 1
+                        Amsal Sir
                       </ShimmerButton>
                     </div>
                   </div>
@@ -269,7 +269,7 @@ export default function CareerPage() {
                         background="linear-gradient(135deg, #fc4707 0%, #ff6b3d 100%)"
                         className="font-medium px-4 py-2 rounded-full text-white text-sm w-full sm:w-auto"
                       >
-                        Schedule with Expert 2
+                        Abdul Razzak Sir
                       </ShimmerButton>
                     </div>
                   </div>
