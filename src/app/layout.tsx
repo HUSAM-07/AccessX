@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "UniDash",
-  description: "Start your saving hours daily!",
+  description: "Start saving time doing your uni work!",
 };
 
 function DesktopMenu() {
