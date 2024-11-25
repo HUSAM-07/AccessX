@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ShimmerButton from "@/components/magicui/shimmer-button";
+import { Coffee } from "lucide-react";
 
 export default function AboutPage() {
   return (
@@ -16,7 +17,7 @@ export default function AboutPage() {
         <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:border-[#fc4707] transition-colors">
           <h3 className="text-lg font-semibold mb-4">What is UniDash?</h3>
           <p className="text-gray-600">
-            UniDash is a web application designed to consolidate university portals and websites into a single, accessible platform. Our goal is to help students and faculty easily navigate and find the information they need from various universities.
+            UniDash is a web application designed to consolidate university portals and websites into a single, accessible platform. Our goal is to help students and faculty easily navigate and find the information & tools they need.
           </p>
         </div>
 
@@ -79,6 +80,40 @@ export default function AboutPage() {
           <p className="text-gray-600 text-sm">
             A glimpse of the UniDash interface - your all-in-one university resource hub
           </p>
+        </div>
+      </div>
+
+      {/* Support Us Section */}
+      <div className="text-center mb-16">
+        <h2 className="text-2xl font-semibold mb-8">Support Us</h2>
+        <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 max-w-2xl mx-auto">
+          <div className="space-y-6">
+            <div className="flex items-center justify-center">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center">
+                <Coffee className="w-8 h-8 text-[#fc4707]" />
+              </div>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-lg font-medium">Help us keep UniDash running</h3>
+              <p className="text-gray-600">
+                If you find UniDash helpful, consider supporting us. Your contribution helps maintain and improve the platform for everyone.
+              </p>
+              <a 
+                href="https://buymeacoffee.com/unihusam" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <ShimmerButton
+                  shimmerColor="#ffffff"
+                  background="linear-gradient(135deg, #fc4707 0%, #ff6b3d 100%)"
+                  className="font-medium px-6 py-3 rounded-lg text-white"
+                >
+                  Buy me a coffee ☕
+                </ShimmerButton>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
