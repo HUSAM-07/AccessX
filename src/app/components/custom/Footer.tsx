@@ -12,6 +12,7 @@ const footerSections = [
       { name: 'Attendance Tracker', href: '/attendance-tracker' },
       { name: 'Course Handouts', href: '/course-handouts' },
       { name: 'PYQ Analyzer', href: '/paper-analysis' },
+      { name: 'Career Services', href: '/career' },
       { name: 'Resume Generator', href: '/resume-generator' },
     ]
   },
