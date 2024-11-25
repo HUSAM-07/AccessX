@@ -204,7 +204,7 @@ export default function CareerPage() {
                 </h3>
                 <p className="text-gray-600">
                   Schedule a 15-minute consultation with the Career Services Division. 
-                  You can discuss your placement and internship opportunities, 
+                  You can discuss about placement and internship opportunities, 
                   receive guidance, and get answers to any questions you might have about your career path.
                 </p>
               </div>
