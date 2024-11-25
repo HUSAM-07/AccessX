@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo, useEffect } from "react"
 import Image from "next/image"
-import { Check, ChevronsUpDown } from "lucide-react"
+import { Check, ChevronsUpDown, Clock, Users, GraduationCap } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { VelocityScroll } from "@/components/ui/scroll-based-velocity"
@@ -98,6 +98,7 @@ export default function CareerPage() {
     { id: "vision-mission", title: "Our Vision and Mission" },
     { id: "support", title: "Support We Offer" },
     { id: "resume-tips", title: "Resume Building Tips" },
+    { id: "consultation", title: "Guidance with Career Services Division" },
     { id: "companies", title: "List of Companies" },
   ]
 
@@ -184,6 +185,95 @@ export default function CareerPage() {
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-[#fc4707]"></div>
                 <span className="text-gray-600">Common mistakes to avoid</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Consultation Section */}
+      <section id="consultation" className="mb-16">
+        <h2 className="text-2xl font-semibold mb-6">Guidance with Career Services Division</h2>
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:border-[#fc4707] transition-colors">
+          <div className="p-8">
+            <div className="space-y-8">
+              {/* Introduction */}
+              <div className="max-w-2xl">
+                <h3 className="text-xl font-semibold mb-4">
+                  Get Personalized Career Guidance
+                </h3>
+                <p className="text-gray-600">
+                  Schedule a 15-minute consultation with our Career Services experts. 
+                  We're here to discuss your placement and internship opportunities, 
+                  provide guidance, and answer any questions you might have about your career path.
+                </p>
+              </div>
+
+              {/* Features */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center">
+                    <Clock className="w-4 h-4 text-[#fc4707]" />
+                  </div>
+                  <span className="text-gray-600">15-minute sessions</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center">
+                    <Users className="w-4 h-4 text-[#fc4707]" />
+                  </div>
+                  <span className="text-gray-600">1:1 guidance</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center">
+                    <GraduationCap className="w-4 h-4 text-[#fc4707]" />
+                  </div>
+                  <span className="text-gray-600">Career planning</span>
+                </div>
+              </div>
+
+              {/* Career Experts */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                {/* Expert 1 */}
+                <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-16 h-16 rounded-full bg-white shadow-sm flex items-center justify-center">
+                      <Users className="w-8 h-8 text-[#fc4707]" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="text-lg font-semibold mb-2">Amsal Sir</h4>
+                      <p className="text-gray-600 text-sm mb-4">Specializing in placement guidance and career development strategies</p>
+                      <ShimmerButton
+                        onClick={() => window.open('https://calendly.com/uni-husam/consulation-call', '_blank')}
+                        shimmerColor="#ffffff"
+                        background="linear-gradient(135deg, #fc4707 0%, #ff6b3d 100%)"
+                        className="font-medium px-4 py-2 rounded-full text-white text-sm w-full sm:w-auto"
+                      >
+                        Schedule with Expert 1
+                      </ShimmerButton>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Expert 2 */}
+                <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-16 h-16 rounded-full bg-white shadow-sm flex items-center justify-center">
+                      <Users className="w-8 h-8 text-[#fc4707]" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="text-lg font-semibold mb-2">Abdul Razzak Sir</h4>
+                      <p className="text-gray-600 text-sm mb-4">Focusing on internship opportunities and industry connections</p>
+                      <ShimmerButton
+                        onClick={() => window.open('https://calendly.com/uni-husam/consulation-call', '_blank')}
+                        shimmerColor="#ffffff"
+                        background="linear-gradient(135deg, #fc4707 0%, #ff6b3d 100%)"
+                        className="font-medium px-4 py-2 rounded-full text-white text-sm w-full sm:w-auto"
+                      >
+                        Schedule with Expert 2
+                      </ShimmerButton>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
