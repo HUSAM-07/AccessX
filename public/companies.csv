@@ -1,88 +1,86 @@
-Company Name,Stipend,Common Roles,Hires In
-Deriv,"3,200 AED",Software Dev,PS-1
-Emirates,No Stipend,Data Science Eng.,PS-2
-ESRI,"3,700 AED",Python Developer,PS-2
-"PWC,Dubai","3,000 AED",AI Engineer,PS-1
-"Absolut Data,India",No Info,No Info,PS-2
-Al Sagr Insurance,No Info,No Info,PS-2
-Al Shirawi Equipment Company LLC,No Info,No Info,PS-2
-Alwafaa,No Info,No Info,PS-2
-Amber Enterprises India Ltd,No Info,No Info,PS-2
-Arteche Middle East,No Info,No Info,PS-2
-Atkins,No Info,No Info,PS-2
-Aver Solutions,No Info,No Info,PS-2
-BAHWAN CYBERTEK FZ LLC,No Info,No Info,PS-2
-Brainy N Bright,No Info,No Info,PS-2
-CAE Maritime Middle East LLS,No Info,No Info,PS-2
-"Capgemini,India",No Info,No Info,PS-2
-Casamia,No Info,No Info,PS-2
-Civil Matrix,No Info,No Info,PS-2
-Clear Water Solutions - DIC,No Info,No Info,PS-2
-"Code Tru,India",No Info,No Info,PS-2
-"Cogniver technologies,Dubai",No Info,No Info,PS-2
-Creed and Bear,No Info,No Info,PS-2
-CyberDisti,No Info,No Info,PS-2
-Deriv,No Info,No Info,PS-2
-DIB,No Info,No Info,PS-2
-"Dupont,India",No Info,No Info,PS-2
-"EA Technologies,Dubai",No Info,No Info,PS-2
-Emerson,No Info,No Info,PS-2
-"Emirates Hospital,Dubai",No Info,No Info,PS-2
-Enginious LLC-FZ,No Info,No Info,PS-2
-"Esfera and Aster FZE,Dubai",No Info,No Info,PS-2
-Esri R&D SHJ UAE,No Info,No Info,PS-2
-Fractals,No Info,No Info,PS-2
-"Francom Middle East,Dubai",No Info,No Info,PS-2
-GBM,No Info,No Info,PS-2
-Greenware Technologies,No Info,No Info,PS-2
-Hansa Energy,No Info,No Info,PS-2
-Hashinclude,No Info,No Info,PS-2
-Hydro,No Info,No Info,PS-2
-ICBA,No Info,No Info,PS-2
-ICC Loyalty,No Info,No Info,PS-2
-Impiger Technologies,No Info,No Info,PS-2
-"Indian Oil Corporation,India",No Info,No Info,PS-2
-Intelpeek,No Info,No Info,PS-2
-InTwo,No Info,No Info,PS-2
-Kema,No Info,No Info,PS-2
-"KPTAC Technologies ,Dubai",No Info,No Info,PS-2
-Lamprell,No Info,No Info,PS-2
-Landmark Group,No Info,No Info,PS-2
-"Lucy Electric,Dubai",No Info,No Info,PS-2
-Master System,No Info,No Info,PS-2
-MES,No Info,No Info,PS-2
-Metadata,No Info,No Info,PS-2
-"Mondelez International,Dubai",No Info,No Info,PS-2
-"MSD,Dubai",No Info,No Info,PS-2
-National Laboratory,No Info,No Info,PS-2
-"OSI Infotech LLC,AUH",No Info,No Info,PS-2
-P. S. K. Infrastructures And Projects Limited,No Info,No Info,PS-2
-Panacor Technologies LLC,No Info,No Info,PS-2
-Paramount,No Info,No Info,PS-2
-"Petrofac, Sharjah",No Info,No Info,PS-2
-POWER MECH PROJECTS LIMITED,No Info,No Info,PS-2
-Protiviti,No Info,No Info,PS-2
-"PWC,Dubai",No Info,No Info,PS-2
-"Reckitt Benckiser,Dubai",No Info,No Info,PS-2
-RNS Technology Services,No Info,No Info,PS-2
-"Savills,Sharjah",No Info,No Info,PS-2
-"SEMEA Electrical & Automation FZE,Dubai",No Info,No Info,PS-2
-Sentient Labs FZ LLC,No Info,No Info,PS-2
-Sharaf DG,No Info,No Info,PS-2
-Siemens Energy,No Info,No Info,PS-2
-"STANDARD GLOBAL QUALITY CERTIFICATES,AUH",No Info,No Info,PS-2
-"Synopsys,Bangalore",No Info,No Info,PS-2
-Taurani Holdings - THL,No Info,No Info,PS-2
-Taurani Holdings - UTP,No Info,No Info,PS-2
-Taurani Holdngs - KHK SCAFFOLDING,No Info,No Info,PS-2
-TCS,No Info,No Info,PS-2
-Techrobotix,No Info,No Info,PS-2
-"Triway Technologies, Dubai",No Info,No Info,PS-2
-Upskiller,No Info,No Info,PS-2
-VAI Management,No Info,No Info,PS-2
-W A F A Biological Laboratory LLC,No Info,No Info,PS-2
-Weidmüller group,No Info,No Info,PS-2
-Wipro,No Info,No Info,PS-2
-"ZF India Private Limited,Hyderabad",No Info,No Info,PS-2
-"ZingHR,Dubai",No Info,No Info,PS-2
-Zutari,No Info,No Info,PS-2
+Company Name,Stipend,Role,Hires In
+Emirates,No Stipend,Data Science,PS-2
+"PWC,Dubai","3,000 AED",Subjective,PS-1
+"Absolut Data,India","Approx 1,000 AED",Subjective,PS-2
+Al Sagr Insurance,"Approx 1,000 AED",Subjective,PS-2
+Al Shirawi Equipment Company LLC,"Approx 1,000 AED",Subjective,PS-2
+Alwafaa,"Approx 1,000 AED",Subjective,PS-2
+Amber Enterprises India Ltd,"Approx 1,000 AED",Subjective,PS-2
+Arteche Middle East,"Approx 1,000 AED",Subjective,PS-2
+Atkins,"Approx 1,000 AED",Subjective,PS-2
+Aver Solutions,"Approx 1,000 AED",Subjective,PS-2
+BAHWAN CYBERTEK FZ LLC,"Approx 1,000 AED",Subjective,PS-2
+Brainy N Bright,"Approx 1,000 AED",Subjective,PS-2
+CAE Maritime Middle East LLS,"Approx 1,000 AED",Subjective,PS-2
+"Capgemini,India","Approx 1,000 AED",Subjective,PS-2
+Casamia,"Approx 1,000 AED",Subjective,PS-2
+Civil Matrix,"Approx 1,000 AED",Subjective,PS-2
+Clear Water Solutions - DIC,"Approx 1,000 AED",Subjective,PS-2
+"Code Tru,India","Approx 1,000 AED",Subjective,PS-2
+"Cogniver technologies,Dubai","Approx 1,000 AED",Subjective,PS-2
+Creed and Bear,"Approx 1,000 AED",Subjective,PS-2
+CyberDisti,"Approx 1,000 AED",Subjective,PS-2
+Deriv,"3,000 AED",Subjective,PS-2
+DIB,"Approx 1,000 AED",Subjective,PS-2
+"Dupont,India","Approx 1,000 AED",Subjective,PS-2
+"EA Technologies,Dubai","3,000 AED",Subjective,PS-2
+Emerson,"2,000 AED",Subjective,PS-2
+"Emirates Hospital,Dubai","Approx 1,000 AED",Subjective,PS-2
+Enginious LLC-FZ,"Approx 1,000 AED",Subjective,PS-2
+"Esfera and Aster FZE,Dubai","Approx 1,000 AED",Subjective,PS-2
+Esri R&D SHJ UAE,"3,750 AED",Subjective,PS-2
+Fractals,"Approx 1,000 AED",Subjective,PS-2
+"Francom Middle East,Dubai","Approx 1,000 AED",Subjective,PS-2
+GBM,"Approx 1,000 AED",Subjective,PS-2
+Greenware Technologies,"Approx 1,000 AED",Subjective,PS-2
+Hansa Energy,"Approx 1,000 AED",Subjective,PS-2
+Hashinclude,"Approx 1,000 AED",Subjective,PS-2
+Hydro,"Approx 1,000 AED",Subjective,PS-2
+ICBA,"Approx 1,000 AED",Subjective,PS-2
+ICC Loyalty,"Approx 1,000 AED",Subjective,PS-2
+Impiger Technologies,"Approx 1,000 AED",Subjective,PS-2
+"Indian Oil Corporation,India","Approx 1,000 AED",Subjective,PS-2
+Intelpeek,"Approx 1,000 AED",Subjective,PS-2
+InTwo,"Approx 1,000 AED",Subjective,PS-2
+Kema,"Approx 1,000 AED",Subjective,PS-2
+"KPTAC Technologies ,Dubai","Approx 1,000 AED",Subjective,PS-2
+Lamprell,"Approx 1,000 AED",Subjective,PS-2
+Landmark Group,"2,500 AED",Subjective,PS-2
+"Lucy Electric,Dubai","Approx 1,000 AED",Subjective,PS-2
+Master System,"Approx 1,000 AED",Subjective,PS-2
+MES,"Approx 1,000 AED",Subjective,PS-2
+Metadata,"Approx 1,000 AED",Subjective,PS-2
+"Mondelez International,Dubai","Approx 1,000 AED",Subjective,PS-2
+"MSD,Dubai","3,000 AED",Subjective,PS-2
+National Laboratory,"Approx 1,000 AED",Subjective,PS-2
+"OSI Infotech LLC,AUH","Approx 1,000 AED",Subjective,PS-2
+P. S. K. Infrastructures And Projects Limited,"Approx 1,000 AED",Subjective,PS-2
+Panacor Technologies LLC,"Approx 1,000 AED",Subjective,PS-2
+Paramount,"Approx 1,000 AED",Subjective,PS-2
+"Petrofac, Sharjah","Approx 1,000 AED",Subjective,PS-2
+POWER MECH PROJECTS LIMITED,"Approx 1,000 AED",Subjective,PS-2
+Protiviti,"Approx 1,000 AED",Subjective,PS-2
+"PWC,Dubai","3,500 AED",Subjective,PS-2
+"Reckitt Benckiser,Dubai","3,000 AED",Subjective,PS-2
+RNS Technology Services,"Approx 1,000 AED",Subjective,PS-2
+"Savills,Sharjah","Approx 1,000 AED",Subjective,PS-2
+"SEMEA Electrical & Automation FZE,Dubai","Approx 1,000 AED",Subjective,PS-2
+Sentient Labs FZ LLC,"Approx 1,000 AED",Subjective,PS-2
+Sharaf DG,"3,000 AED",Data Analytics,PS-2
+Siemens Energy,"3,000 AED",Software Engineer,PS-2
+"STANDARD GLOBAL QUALITY CERTIFICATES,AUH","Approx 1,000 AED",Subjective,PS-2
+"Synopsys,Bangalore","Approx 1,000 AED",Subjective,PS-2
+Taurani Holdings - THL,"Approx 1,000 AED",Subjective,PS-2
+Taurani Holdings - UTP,"Approx 1,000 AED",Subjective,PS-2
+Taurani Holdngs - KHK SCAFFOLDING,"Approx 1,000 AED",Subjective,PS-2
+TCS,"Approx 1,000 AED",Subjective,PS-2
+Techrobotix,"Approx 1,000 AED",Subjective,PS-2
+"Triway Technologies, Dubai","Approx 1,000 AED",Subjective,PS-2
+Upskiller,"Approx 1,000 AED",Subjective,PS-2
+VAI Management,"Approx 1,000 AED",Subjective,PS-2
+W A F A Biological Laboratory LLC,"Approx 1,000 AED",Subjective,PS-2
+Weidmüller group,"Approx 1,000 AED",Subjective,PS-2
+Wipro,"Approx 1,000 AED",Subjective,PS-2
+"ZF India Private Limited,Hyderabad","Approx 1,000 AED",Subjective,PS-2
+"ZingHR,Dubai","Approx 1,000 AED",Subjective,PS-2
+Zutari,"Approx 1,000 AED",Subjective,PS-2
