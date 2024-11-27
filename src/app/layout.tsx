@@ -77,7 +77,6 @@ function MobileMenu() {
       <DropdownMenuContent align="end">
         <DropdownMenuItem>
           <a href="/" className="w-full inline-flex items-center">
-            <AtSign className="h-4 w-4 mr-2" />
             Home
           </a>
         </DropdownMenuItem>
