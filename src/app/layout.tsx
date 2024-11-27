@@ -4,9 +4,9 @@ import "./globals.css";
 import Footer from "@/app/components/custom/Footer";
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu";
-import { Menu } from "lucide-react";
+import { Menu, Sparkle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ArrowRightIcon } from "@radix-ui/react-icons";
+import { BackpackIcon } from "@radix-ui/react-icons";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -44,7 +44,15 @@ function DesktopMenu() {
           <Button asChild variant="outline" size="sm">
             <NavigationMenuLink className="inline-flex items-center" href="/career">
               Career Guidance
-              <ArrowRightIcon className="ml-2 h-4 w-4" />
+              <BackpackIcon className="ml-2 h-4 w-4" />
+            </NavigationMenuLink>
+          </Button>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Button asChild variant="outline" size="sm">
+            <NavigationMenuLink className="inline-flex items-center" href="/dashboard">
+              Access LMS, ERP, and more
+              <Sparkle className="ml-2 h-4 w-4" />
             </NavigationMenuLink>
           </Button>
         </NavigationMenuItem>
@@ -85,7 +93,15 @@ function MobileMenu() {
           <Button asChild variant="outline" className="w-full justify-start">
             <a href="/career" className="inline-flex items-center justify-start w-full">
               Career Guidance
-              <ArrowRightIcon className="ml-auto h-4 w-4" />
+              <BackpackIcon className="ml-auto h-4 w-4" />
+            </a>
+          </Button>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <Button asChild variant="outline" className="w-full justify-start">
+            <a href="/dashboard" className="inline-flex items-center justify-start w-full">
+              Access LMS, ERP, and more
+              <Sparkle className="ml-auto h-4 w-4" />
             </a>
           </Button>
         </DropdownMenuItem>
