@@ -4,7 +4,7 @@ import "./globals.css";
 import Footer from "@/app/components/custom/Footer";
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu";
-import { Menu, Sparkle } from "lucide-react";
+import { Menu, Sparkle, AtSign } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BackpackIcon } from "@radix-ui/react-icons";
 
@@ -20,7 +20,9 @@ function DesktopMenu() {
     <NavigationMenu className="hidden md:flex">
       <NavigationMenuList className="flex space-x-6">
         <NavigationMenuItem>
-          <NavigationMenuLink className="hover:underline" href="/">Home Page</NavigationMenuLink>
+          <NavigationMenuLink className="hover:text-[#fc4707] transition-colors" href="/">
+            <AtSign className="h-5 w-5" />
+          </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink className="hover:underline" href="/about">About</NavigationMenuLink>
@@ -49,7 +51,12 @@ function DesktopMenu() {
           </Button>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Button asChild variant="outline" size="sm">
+          <Button 
+            asChild 
+            variant="outline" 
+            size="sm"
+            className="border-purple-200 bg-purple-50 hover:bg-purple-100 hover:text-purple-900 text-purple-700"
+          >
             <NavigationMenuLink className="inline-flex items-center" href="/dashboard">
               Access LMS, ERP, and more
               <Sparkle className="ml-2 h-4 w-4" />
@@ -69,7 +76,10 @@ function MobileMenu() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem>
-          <a href="/" className="w-full">Home Page</a>
+          <a href="/" className="w-full inline-flex items-center">
+            <AtSign className="h-4 w-4 mr-2" />
+            Home
+          </a>
         </DropdownMenuItem>
         <DropdownMenuItem>
           <a href="/about" className="w-full">About</a>
@@ -98,7 +108,11 @@ function MobileMenu() {
           </Button>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
-          <Button asChild variant="outline" className="w-full justify-start">
+          <Button 
+            asChild 
+            variant="outline" 
+            className="w-full justify-start border-purple-200 bg-purple-50 hover:bg-purple-100 hover:text-purple-900 text-purple-700"
+          >
             <a href="/dashboard" className="inline-flex items-center justify-start w-full">
               Access LMS, ERP, and more
               <Sparkle className="ml-auto h-4 w-4" />
