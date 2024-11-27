@@ -38,6 +38,9 @@ function DesktopMenu() {
           <NavigationMenuLink className="hover:underline" href="/resume-generator">Resume Builder</NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
+          <NavigationMenuLink className="hover:underline" href="/courses">Pathways</NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
           <Button asChild variant="outline" size="sm">
             <NavigationMenuLink className="inline-flex items-center" href="/career">
               Career Guidance
@@ -74,6 +77,9 @@ function MobileMenu() {
         </DropdownMenuItem>
         <DropdownMenuItem>
           <a href="/resume-generator" className="w-full">Resume Builder</a>
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <a href="/courses" className="w-full">Pathways</a>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
           <Button asChild variant="outline" className="w-full justify-start">
