@@ -53,6 +53,10 @@ type Company = {
 
 const fetcher = (url: string) => fetch(url).then((res) => res.text()).then((data) => {
   const parsed = Papa.parse(data, { header: true });
+  if (parsed.errors.length > 0) {
+    console.error('CSV parsing errors:', parsed.errors);
+    return [];
+  }
   return parsed.data as Company[];
 });
 
@@ -64,14 +68,20 @@ export default function CareerPage() {
   const { data: companies, error } = useSWR<Company[]>('/companies.csv', fetcher)
 
   const sortedCompanies = useMemo(() => {
-    if (!companies) return [];
+    if (!companies || !Array.isArray(companies)) return [];
     
     let sorted = [...companies];
     
     if (value === "ps1") {
-      sorted = sorted.filter(company => company["Hires In"].toLowerCase().includes("ps-1"));
+      sorted = sorted.filter(company => 
+        company["Hires In"]?.toLowerCase().includes("ps-1") || 
+        company["Hires In"]?.toLowerCase().includes("ps1")
+      );
     } else if (value === "ps2") {
-      sorted = sorted.filter(company => company["Hires In"].toLowerCase().includes("ps-2"));
+      sorted = sorted.filter(company => 
+        company["Hires In"]?.toLowerCase().includes("ps-2") || 
+        company["Hires In"]?.toLowerCase().includes("ps2")
+      );
     }
     
     return sorted;
