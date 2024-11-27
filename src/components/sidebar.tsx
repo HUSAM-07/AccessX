@@ -34,7 +34,6 @@ export function Sidebar({ className }: SidebarProps) {
   const courseLinks = [
     { href: "#overview", icon: Briefcase, label: "Course Guide Overview" },
     { href: "#domains", icon: Network, label: "Core Domains" },
-    { href: "#specializations", icon: LayoutList, label: "Specialized Tracks" },
     { href: "#prerequisites", icon: History, label: "Prerequisites" },
   ]
 

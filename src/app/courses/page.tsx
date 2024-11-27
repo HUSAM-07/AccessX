@@ -1,6 +1,7 @@
 'use client'
 import { CoursesLayout } from '@/components/courses-layout'
 import { Button } from "@/components/ui/button"
+import { Separator } from "@/components/ui/separator"
 import Image from 'next/image'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@/components/ui/table"
@@ -15,6 +16,8 @@ export default function CoursesPage() {
             Explore recommended courses for different specializations within Computer Science. This guide helps you choose electives that align with your career goals and interests in various domains of computing.
           </p>
         </section>
+
+        <Separator className="my-12 bg-gray-100" />
 
         <section id="domains">
           <h2 className="text-3xl font-bold">Core Domains</h2>
@@ -66,6 +69,8 @@ export default function CoursesPage() {
             </Table>
           </div>
         </section>
+
+        <Separator className="my-12 bg-gray-100" />
 
         {/* Graduation Prerequisites */}
         <section id="prerequisites">
