@@ -53,10 +53,6 @@ type Company = {
 
 const fetcher = (url: string) => fetch(url).then((res) => res.text()).then((data) => {
   const parsed = Papa.parse(data, { header: true });
-  if (parsed.errors.length > 0) {
-    console.error('CSV parsing errors:', parsed.errors);
-    return [];
-  }
   return parsed.data as Company[];
 });
 
@@ -68,20 +64,14 @@ export default function CareerPage() {
   const { data: companies, error } = useSWR<Company[]>('/companies.csv', fetcher)
 
   const sortedCompanies = useMemo(() => {
-    if (!companies || !Array.isArray(companies)) return [];
+    if (!companies) return [];
     
     let sorted = [...companies];
     
     if (value === "ps1") {
-      sorted = sorted.filter(company => 
-        company["Hires In"]?.toLowerCase().includes("ps-1") || 
-        company["Hires In"]?.toLowerCase().includes("ps1")
-      );
+      sorted = sorted.filter(company => company["Hires In"].toLowerCase().includes("ps-1"));
     } else if (value === "ps2") {
-      sorted = sorted.filter(company => 
-        company["Hires In"]?.toLowerCase().includes("ps-2") || 
-        company["Hires In"]?.toLowerCase().includes("ps2")
-      );
+      sorted = sorted.filter(company => company["Hires In"].toLowerCase().includes("ps-2"));
     }
     
     return sorted;
@@ -104,9 +94,7 @@ export default function CareerPage() {
   if (!companies) return <div>Loading...</div>
 
   const sections = [
-    { id: "about", title: "What We Are" },
-    { id: "vision-mission", title: "Our Vision and Mission" },
-    { id: "support", title: "Support We Offer" },
+    { id: "about", title: "Who Are We" },
     { id: "resume-tips", title: "Resume Building Tips" },
     { id: "consultation", title: "Guidance with Career Services Division" },
     { id: "companies", title: "List of Companies" },
@@ -120,7 +108,7 @@ export default function CareerPage() {
           <span className="inline-block bg-[#fc4707] text-white text-sm px-4 py-1 rounded-full mb-4">We're helping you get hired!</span>
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">Career Services Division</h1>
           <p className="text-gray-600 text-lg max-w-2xl">
-            We're looking for passionate people to join us on our mission. We value clear communication, and full ownership and responsibility.
+            Connecting BITS Dubai students with world-class internship opportunities.
           </p>
         </div>
       </div>
@@ -140,7 +128,7 @@ export default function CareerPage() {
 
       {/* About CSD Section */}
       <section id="about" className="mb-16">
-        <h2 className="text-2xl font-semibold mb-6">What We Are</h2>
+        <h2 className="text-2xl font-semibold mb-6">Who Are We</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-[#fc4707] transition-colors">
             <p className="text-gray-600">
