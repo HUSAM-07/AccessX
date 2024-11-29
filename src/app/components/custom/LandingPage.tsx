@@ -64,13 +64,13 @@ const LandingPage: React.FC = () => {
       <main className="flex-grow flex flex-col items-center justify-center px-4 max-w-4xl mx-auto text-center">
         <div className="text-sm mb-4 flex items-center justify-center">
           <Image src="/bits.png" alt="Student Council Logo" width={24} height={24} className="mr-2 rounded-full" />
-          <span className="text-xs sm:text-sm">Backed by Student Council BITS Pilani Dubai Campus</span>
+          <span className="text-xs sm:text-sm">Trusted by Students at BITS Pilani Dubai Campus</span>
         </div>
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
           Access all your university tools and resources in one place.
         </h1>
         <p className="text-base sm:text-lg md:text-xl mb-8">
-          Quickly find info about course requirements, simplify resources navigation, be organized. Save hours on your academic planning.
+          Quickly find info about course requirements, simplify resources navigation, be organized. <span className="font-bold">Save hours on your academic planning.</span>
         </p>
         <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
           <Button 
