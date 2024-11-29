@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { ExternalLinkIcon, InstagramLogoIcon, LinkedInLogoIcon, TwitterLogoIcon, PersonIcon } from '@radix-ui/react-icons'
+import { ExternalLinkIcon, InstagramLogoIcon, LinkedInLogoIcon, TwitterLogoIcon, PersonIcon, BackpackIcon, GitHubLogoIcon } from '@radix-ui/react-icons'
 import Link from 'next/link'
 
 const footerSections = [
@@ -22,6 +22,8 @@ const footerSections = [
       { name: 'Instagram', href: 'https://www.instagram.com/itshu.sam/', icon: <InstagramLogoIcon className="h-4 w-4" /> },
       { name: 'LinkedIn', href: 'https://www.linkedin.com/in/mohammedhusamuddin/', icon: <LinkedInLogoIcon className="h-4 w-4" /> },
       { name: 'Twitter', href: 'https://x.com/HU_SAM007', icon: <TwitterLogoIcon className="h-4 w-4" /> },
+      { name: 'View Portfolio', href: 'https://www.mohammedhusamuddin.me/', icon: <BackpackIcon className="h-4 w-4" /> },
+      { name: 'GitHub', href: 'https://github.com/HUSAM-07', icon: <GitHubLogoIcon className="h-4 w-4" /> },
       { name: 'Blog', href: 'https://valuevault.beehiiv.com/', icon: <ExternalLinkIcon className="h-4 w-4" /> },
     ]
   },
