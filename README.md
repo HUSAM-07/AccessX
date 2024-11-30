@@ -8,46 +8,54 @@ UniDash simplifies university life by bringing all your academic tools and resou
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
 [![Tailwind](https://img.shields.io/badge/Tailwind-3.0-38bdf8)](https://tailwindcss.com/)
 
-## 📚 Table of Contents
+## 📚 Quick Start
 
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Architecture](#-architecture)
-- [Getting Started](#-getting-started)
-- [Development](#-development)
-- [Contributing](#-contributing)
-- [Deployment](#-deployment)
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/unidash.git
 
-## 🚀 Features
+# Install dependencies
+npm install
 
-- **Unified Access**: Single sign-on for ERP, LMS, and other university portals
-- **Career Services**: 
-  - Company listings for PS1/PS2
-  - Resume building tools
-  - Career guidance scheduling
-- **Academic Tools**:
-  - Course pathways guide
-  - Previous year papers analysis
-  - Student-contributed notes
-- **Resource Hub**: 
-  - ACM library access
-  - Google DSC resources
-  - MTC materials
+# Start development server
+npm run dev
+```
 
-## 💻 Tech Stack
+Open [http://localhost:3000](http://localhost:3000) to view the app.
 
-- **Frontend Framework**: Next.js 14
+## 🚀 Key Features
+
+### 📱 Core Functionality
+- Single sign-on integration for all university portals
+- Unified dashboard for ERP, LMS, and other systems
+- Progressive Web App (PWA) support
+
+### 📚 Academic Resources
+- Course pathways visualization
+- Previous year papers repository
+- Student-contributed study materials
+- ACM library access integration
+
+### 💼 Career Services
+- PS1/PS2 company listings
+- Resume builder and templates
+- Career counseling appointment system
+- Google DSC resources
+
+## 🛠️ Technical Overview
+
+### Tech Stack
+- **Framework**: Next.js 14
 - **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **UI Components**: Radix UI, Shadcn UI
-- **Authentication**: Firebase Authentication
-- **State Management**: React Hooks
-- **Data Fetching**: SWR
-- **PWA Support**: next-pwa
-- **CSV Parsing**: Papa Parse
+- **Styling**: Tailwind CSS + Radix UI/Shadcn
+- **Authentication**: Firebase
+- **Data Management**: 
+  - SWR for fetching
+  - React Hooks for state
+  - Papa Parse for CSV handling
 - **Icons**: Lucide React
 
-## 📈 Architecture
+### System Architecture
 
 ```mermaid
 flowchart TD
@@ -64,6 +72,8 @@ D --> D2[React Hooks]
 D --> D3[Papa Parse]
 ```
 
+### User Flow
+
 ```mermaid
 flowchart LR
 User --> |Authenticates| Auth[Firebase Auth]
@@ -75,60 +85,34 @@ Resources --> Notes[Uni Notes]
 Resources --> Career[Career Services]
 ```
 
-## Project Structure
+## 👩‍💻 Development Guide
 
-The project follows a typical Next.js structure with some custom organization:
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Project Structure
+```
+unidash/
+├── src/
+│   ├── app/         # Next.js app router
+│   ├── components/  # Reusable UI components
+│   ├── lib/        # Utility functions
+│   └── styles/     # Global styles
+├── public/         # Static assets
+└── tests/         # Test files
 ```
 
-# Project Documentation
+### Contributing Workflow
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```mermaid
+flowchart LR
+    A[Fork] --> B[Clone]
+    B --> C[Create Branch]
+    C --> D[Make Changes]
+    D --> E[Test]
+    E --> F[Create PR]
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-### Contribution Guidelines
-
-1. **Fork & Clone**
-   ```mermaid
-   flowchart LR
-       A[Fork] --> B[Clone]
-       B --> C[Setup]
-       C --> D[Branch]
-   ```
-
-2. **Development Workflow**
-   ```mermaid
-   flowchart LR
-       A[Code] --> B[Test]
-       B --> C[Commit]
-       C --> D[Push]
-   ```
-
-3. **Pull Request Process**
-   ```mermaid
-   flowchart LR
-       A[Create PR] --> B[Review]
-       B --> C[Address Comments]
-       C --> D[Merge]
-   ```
-
-## 📦 Deployment
-
+### Deployment Flow
 ```mermaid
 flowchart LR
 A[Code Changes] --> B[PR Created]
@@ -139,3 +123,13 @@ D -->|No| A
 E --> F[Merge to Main]
 F --> G[Production Deploy]
 ```
+
+## 📄 Additional Resources
+
+- [Contributing Guidelines](CONTRIBUTING.md)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [License](LICENSE.md)
+
+## 🤝 Support
+
+For support, email support@unidash.com or join our [Discord community](https://discord.gg/unidash).
