@@ -120,7 +120,7 @@ function MobileMenu() {
           </Button>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
-          <Button 
+          <Button
             asChild 
             variant="outline" 
             className="w-full justify-start border-purple-200 bg-purple-50 hover:bg-purple-100 hover:text-purple-900 text-purple-700"
