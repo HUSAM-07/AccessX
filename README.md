@@ -1,21 +1,40 @@
-# UniDash: University Portal Aggregator
+# UniDash 🎓
 
-UniDash is a web application designed to consolidate university portals and websites into a single, accessible platform. It's specifically tailored for BITS Pilani Dubai Campus, helping students and faculty easily navigate and find information from various university resources.
+> A unified portal aggregator for BITS Pilani Dubai Campus
 
-## We're soon starting an Open Sources Issue Series
-| Hold tight while we make it easy for you to be a part of the UniDash Contributors List
+UniDash simplifies university life by bringing all your academic tools and resources into one place. Built specifically for BITS Pilani Dubai Campus students and faculty.
 
-## Table of Contents
+[![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
+[![Tailwind](https://img.shields.io/badge/Tailwind-3.0-38bdf8)](https://tailwindcss.com/)
 
-1. [Technologies Used](#technologies-used)
-2. [Project Structure](#project-structure)
-3. [Key Features](#key-features)
-4. [Getting Started](#getting-started)
-5. [Development](#development)
-6. [Deployment](#deployment)
-7. [Contributing](#contributing)
+## 📚 Table of Contents
 
-## Technologies Used
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Architecture](#-architecture)
+- [Getting Started](#-getting-started)
+- [Development](#-development)
+- [Contributing](#-contributing)
+- [Deployment](#-deployment)
+
+## 🚀 Features
+
+- **Unified Access**: Single sign-on for ERP, LMS, and other university portals
+- **Career Services**: 
+  - Company listings for PS1/PS2
+  - Resume building tools
+  - Career guidance scheduling
+- **Academic Tools**:
+  - Course pathways guide
+  - Previous year papers analysis
+  - Student-contributed notes
+- **Resource Hub**: 
+  - ACM library access
+  - Google DSC resources
+  - MTC materials
+
+## 💻 Tech Stack
 
 - **Frontend Framework**: Next.js 14
 - **Language**: TypeScript
@@ -27,6 +46,34 @@ UniDash is a web application designed to consolidate university portals and webs
 - **PWA Support**: next-pwa
 - **CSV Parsing**: Papa Parse
 - **Icons**: Lucide React
+
+## 📈 Architecture
+
+```mermaid
+flowchart TD
+A[UniDash] --> B[Frontend]
+A --> C[Authentication]
+A --> D[Data Management]
+B --> B1[Next.js 14]
+B --> B2[TypeScript]
+B --> B3[Tailwind CSS]
+B --> B4[Radix UI/Shadcn]
+C --> C1[Firebase Auth]
+D --> D1[SWR]
+D --> D2[React Hooks]
+D --> D3[Papa Parse]
+```
+
+```mermaid
+flowchart LR
+User --> |Authenticates| Auth[Firebase Auth]
+Auth --> |Grants Access| App[UniDash App]
+App --> |Fetches Data| Resources[University Resources]
+Resources --> ERP[BITS ERP]
+Resources --> LMS[LMS Portal]
+Resources --> Notes[Uni Notes]
+Resources --> Career[Career Services]
+```
 
 ## Project Structure
 
@@ -54,3 +101,41 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+### Contribution Guidelines
+
+1. **Fork & Clone**
+   ```mermaid
+   flowchart LR
+       A[Fork] --> B[Clone]
+       B --> C[Setup]
+       C --> D[Branch]
+   ```
+
+2. **Development Workflow**
+   ```mermaid
+   flowchart LR
+       A[Code] --> B[Test]
+       B --> C[Commit]
+       C --> D[Push]
+   ```
+
+3. **Pull Request Process**
+   ```mermaid
+   flowchart LR
+       A[Create PR] --> B[Review]
+       B --> C[Address Comments]
+       C --> D[Merge]
+   ```
+
+## 📦 Deployment
+
+```mermaid
+flowchart LR
+A[Code Changes] --> B[PR Created]
+B --> C[Preview Deploy]
+C --> D{Tests Pass?}
+D -->|Yes| E[Review]
+D -->|No| A
+E --> F[Merge to Main]
+F --> G[Production Deploy]
+```
