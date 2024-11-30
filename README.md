@@ -8,21 +8,6 @@ UniDash simplifies university life by bringing all your academic tools and resou
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
 [![Tailwind](https://img.shields.io/badge/Tailwind-3.0-38bdf8)](https://tailwindcss.com/)
 
-## 📚 Quick Start
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/unidash.git
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) to view the app.
-
 ## 🚀 Key Features
 
 ### 📱 Core Functionality
