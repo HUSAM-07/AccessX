@@ -6,6 +6,7 @@ import { NeonGradientCard } from "@/components/ui/neon-gradient-card"
 import { VelocityScroll } from "@/components/ui/scroll-based-velocity"
 import { MermaidDiagram } from "@/app/components/custom/mermaid-diagram"
 import { RainbowButton } from "@/components/ui/rainbow-button"
+import AvatarCircles  from "@/components/ui/avatar-circles"
 
 import { 
   MessageSquare, 
@@ -107,6 +108,14 @@ export default function ContributePage() {
     }
   ]
 
+  const contributors = [
+    {
+      imageUrl: "https://github.com/HUSAM-07.png",
+      profileUrl: "https://github.com/HUSAM-07"
+    },
+    // Add more contributors as needed
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       {/* Hero Section */}
@@ -120,7 +129,7 @@ export default function ContributePage() {
           </RainbowButton>
         </div>
 
-        <h1 className="flex flex-col gap-2 sm:gap-4">
+        <h1 className="flex flex-col gap-2 sm:gap-4 mb-6 sm:mb-8">
           <span className="text-4xl sm:text-5xl md:text-7xl font-bold">
             Contribute to UniDash
           </span>
@@ -166,6 +175,25 @@ export default function ContributePage() {
           <span className="flex items-center justify-center gap-3">
             <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6" /> Secure & Reliable
           </span>
+        </div>
+      </div>
+
+      {/* Add Contributors Section */}
+      <div className="bg-white py-12 sm:py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-3">Our Contributors</h2>
+            <p className="text-gray-600 mb-8">
+              Join these awesome developers and contributors in making unidash better
+            </p>
+            <div className="flex justify-center">
+              <AvatarCircles 
+                avatarUrls={contributors}
+                numPeople={10} // Represents additional contributors
+                className="justify-center"
+              />
+            </div>
+          </div>
         </div>
       </div>
 
