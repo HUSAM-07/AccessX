@@ -117,4 +117,4 @@ F --> G[Production Deploy]
 
 ## 🤝 Support
 
-For support, email support@unidash.com or join our [Discord community](https://discord.gg/unidash).
+For support, email f20210150@dubai.bits-pilani.ac.in.
