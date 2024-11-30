@@ -4,7 +4,7 @@ import "./globals.css";
 import Footer from "@/app/components/custom/Footer";
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu";
-import { Menu, Sparkle, AtSign } from "lucide-react";
+import { Menu, Sparkle, AtSign, GitBranch } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BackpackIcon } from "@radix-ui/react-icons";
 
@@ -63,6 +63,19 @@ function DesktopMenu() {
             </NavigationMenuLink>
           </Button>
         </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Button 
+            asChild 
+            variant="outline" 
+            size="sm"
+            className="border-orange-200 bg-orange-50 hover:bg-orange-100 hover:text-orange-900 text-orange-700"
+          >
+            <NavigationMenuLink className="inline-flex items-center" href="/contribute">
+              Contribute
+              <GitBranch className="ml-2 h-4 w-4" />
+            </NavigationMenuLink>
+          </Button>
+        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   );
@@ -115,6 +128,14 @@ function MobileMenu() {
             <a href="/dashboard" className="inline-flex items-center justify-start w-full">
               Access LMS, ERP, and more
               <Sparkle className="ml-auto h-4 w-4" />
+            </a>
+          </Button>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <Button asChild variant="outline" className="w-full justify-start">
+            <a href="/contribute" className="inline-flex items-center justify-start w-full">
+              Contribute
+              <GitBranch className="ml-auto h-4 w-4" />
             </a>
           </Button>
         </DropdownMenuItem>
