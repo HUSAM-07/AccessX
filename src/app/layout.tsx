@@ -18,35 +18,35 @@ export const metadata: Metadata = {
 function DesktopMenu() {
   return (
     <NavigationMenu className="hidden md:flex">
-      <NavigationMenuList className="flex space-x-6">
+      <NavigationMenuList className="flex space-x-4">
         <NavigationMenuItem>
-          <NavigationMenuLink className="hover:text-[#fc4707] transition-colors" href="/">
-            <AtSign className="h-5 w-5" />
+          <NavigationMenuLink className="hover:text-[#fc4707] transition-colors text-sm" href="/">
+            <AtSign className="h-4 w-4" />
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink className="hover:underline" href="/about">About</NavigationMenuLink>
+          <NavigationMenuLink className="hover:underline text-sm" href="/about">About</NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink className="hover:underline" href="/attendance-tracker">Attendance</NavigationMenuLink>
+          <NavigationMenuLink className="hover:underline text-sm" href="/attendance-tracker">Attendance</NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink className="hover:underline" href="/course-handouts">Course Handouts</NavigationMenuLink>
+          <NavigationMenuLink className="hover:underline text-sm" href="/course-handouts">Course Handouts</NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink className="hover:underline" href="/paper-analysis">Paper Analysis</NavigationMenuLink>
+          <NavigationMenuLink className="hover:underline text-sm" href="/paper-analysis">Paper Analysis</NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink className="hover:underline" href="/resume-generator">Resume Builder</NavigationMenuLink>
+          <NavigationMenuLink className="hover:underline text-sm" href="/resume-generator">Resume Builder</NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink className="hover:underline" href="/courses">Pathways</NavigationMenuLink>
+          <NavigationMenuLink className="hover:underline text-sm" href="/courses">Pathways</NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Button asChild variant="outline" size="sm">
+          <Button asChild variant="outline" size="sm" className="text-xs px-2 py-1">
             <NavigationMenuLink className="inline-flex items-center" href="/career">
               Career Guidance
-              <BackpackIcon className="ml-2 h-4 w-4" />
+              <BackpackIcon className="ml-1 h-3 w-3" />
             </NavigationMenuLink>
           </Button>
         </NavigationMenuItem>
@@ -55,11 +55,11 @@ function DesktopMenu() {
             asChild 
             variant="outline" 
             size="sm"
-            className="border-purple-200 bg-purple-50 hover:bg-purple-100 hover:text-purple-900 text-purple-700"
+            className="border-purple-200 bg-purple-50 hover:bg-purple-100 hover:text-purple-900 text-purple-700 text-xs px-2 py-1"
           >
             <NavigationMenuLink className="inline-flex items-center" href="/dashboard">
-              Access LMS, ERP, and more
-              <Sparkle className="ml-2 h-4 w-4" />
+              Access LMS, ERP
+              <Sparkle className="ml-1 h-3 w-3" />
             </NavigationMenuLink>
           </Button>
         </NavigationMenuItem>
@@ -68,11 +68,11 @@ function DesktopMenu() {
             asChild 
             variant="outline" 
             size="sm"
-            className="border-orange-200 bg-orange-50 hover:bg-orange-100 hover:text-orange-900 text-orange-700"
+            className="border-orange-200 bg-orange-50 hover:bg-orange-100 hover:text-orange-900 text-orange-700 text-xs px-2 py-1"
           >
             <NavigationMenuLink className="inline-flex items-center" href="/contribute">
               Contribute
-              <GitBranch className="ml-2 h-4 w-4" />
+              <GitBranch className="ml-1 h-3 w-3" />
             </NavigationMenuLink>
           </Button>
         </NavigationMenuItem>
