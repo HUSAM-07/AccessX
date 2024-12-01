@@ -43,41 +43,49 @@ export default function UniversalError() {
   }, [])
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4 text-center bg-background">
-      <div className="space-y-6 max-w-md">
-        <NeonGradientCard 
-          className="p-8"
-          neonColors={{ firstColor: '#fc4707', secondColor: '#ff6b3d' }}
-        >
-          <h1 className="text-6xl font-bold text-primary mb-4">404</h1>
-          <h2 className="text-2xl font-semibold text-foreground mb-4">Page Not Found</h2>
-          <p className="text-muted-foreground mb-6">
+    <div className="min-h-[100dvh] w-full flex flex-col items-center justify-center p-4 sm:p-6 text-center relative bg-white">
+      <div 
+        className="absolute w-[200vw] sm:w-[1200px] h-[200vw] sm:h-[1200px] -z-10"
+        style={{
+          background: "radial-gradient(circle, rgba(252,71,7,0.15) 0%, rgba(255,107,61,0.08) 35%, transparent 70%)",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          pointerEvents: "none"
+        }}
+      />
+      
+      <div className="space-y-4 sm:space-y-6 w-full max-w-[380px] sm:max-w-md bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-100 relative mx-auto">
+        <div>
+          <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-3 sm:mb-4">404</h1>
+          <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">Page Not Found</h2>
+          <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">
             {pun}
           </p>
-        </NeonGradientCard>
+        </div>
 
-        <Alert>
+        <Alert className="text-sm">
           <Terminal className="h-4 w-4" />
           <AlertTitle>Looking for something?</AlertTitle>
-          <AlertDescription>
+          <AlertDescription className="text-sm">
             Try checking the navigation menu or use the links below to find what you need.
           </AlertDescription>
         </Alert>
 
-        <Button variant="outline" size="sm" onClick={getRandomPun} className="w-full">
+        <Button variant="outline" size="sm" onClick={getRandomPun} className="w-full text-sm">
           <RefreshCw className="mr-2 h-4 w-4" />
           New Pun
         </Button>
 
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Button asChild variant="default" className="flex-1">
+        <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+          <Button asChild variant="default" className="flex-1 text-sm">
             <Link href="/" className="inline-flex items-center justify-center">
               <Home className="mr-2 h-4 w-4" />
               Back to Home
             </Link>
           </Button>
           
-          <Button asChild variant="outline" className="flex-1">
+          <Button asChild variant="outline" className="flex-1 text-sm">
             <Link href="/course-handouts" className="inline-flex items-center justify-center">
               <BookOpen className="mr-2 h-4 w-4" />
               Course Resources
@@ -86,12 +94,16 @@ export default function UniversalError() {
         </div>
 
         <ShimmerButton
-          className="w-full"
+          className="w-full text-sm"
+          background="linear-gradient(135deg, #fc4707 0%, #ff6b3d 100%)"
         >
-          <Link href="https://github.com/HUSAM-07" className="inline-flex items-center justify-center w-full" target="_blank" rel="noopener noreferrer">
+          <a 
+            href="mailto:hello.dev.husam@gmail.com" 
+            className="inline-flex items-center justify-center w-full text-white py-2"
+          >
             <Github className="mr-2 h-4 w-4" />
             Report an Issue
-          </Link>
+          </a>
         </ShimmerButton>
       </div>
     </div>
