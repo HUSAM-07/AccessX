@@ -39,11 +39,6 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination"
 
-const sortOptions = [
-  { value: "ps1", label: "PS-1" },
-  { value: "ps2", label: "PS-2" },
-]
-
 type Company = {
   "Company Name": string;
   Stipend: string;
@@ -61,37 +56,66 @@ export default function CareerPage() {
   const [value, setValue] = useState("")
   const [currentPage, setCurrentPage] = useState(1)
   const companiesPerPage = 5
-  const { data: companies, error } = useSWR<Company[]>('/companies.csv', fetcher)
+  const { data: companies = [], error } = useSWR<Company[]>('/companies.csv', fetcher)
 
   const sortedCompanies = useMemo(() => {
-    if (!companies) return [];
-    
-    let sorted = [...companies];
-    
-    if (value === "ps1") {
-      sorted = sorted.filter(company => company["Hires In"].toLowerCase().includes("ps-1"));
-    } else if (value === "ps2") {
-      sorted = sorted.filter(company => company["Hires In"].toLowerCase().includes("ps-2"));
+    try {
+      if (!Array.isArray(companies)) {
+        console.error("Companies data is not an array:", companies);
+        return [];
+      }
+
+      return [...companies];
+    } catch (error) {
+      console.error("Error processing companies:", error);
+      window.location.href = '/error-universal';
+      return [];
     }
-    
-    return sorted;
-  }, [companies, value]);
+  }, [companies]);
+
+  const paginatedCompanies = useMemo(() => {
+    try {
+      if (!Array.isArray(sortedCompanies)) {
+        return [];
+      }
+      const startIndex = (currentPage - 1) * companiesPerPage;
+      return sortedCompanies.slice(startIndex, startIndex + companiesPerPage);
+    } catch (error) {
+      console.error("Error paginating companies:", error);
+      return [];
+    }
+  }, [sortedCompanies, currentPage, companiesPerPage]);
+
+  const totalPages = useMemo(() => {
+    try {
+      if (!Array.isArray(sortedCompanies)) {
+        return 1;
+      }
+      return Math.max(1, Math.ceil(sortedCompanies.length / companiesPerPage));
+    } catch (error) {
+      console.error("Error calculating total pages:", error);
+      return 1;
+    }
+  }, [sortedCompanies, companiesPerPage]);
 
   useEffect(() => {
     setCurrentPage(1);
   }, [value]);
 
-  const paginatedCompanies = useMemo(() => {
-    const startIndex = (currentPage - 1) * companiesPerPage
-    return sortedCompanies.slice(startIndex, startIndex + companiesPerPage)
-  }, [sortedCompanies, currentPage])
+  useEffect(() => {
+    if (error) {
+      console.error("Error fetching companies data:", error);
+      window.location.href = '/error-universal';
+    }
+  }, [error]);
 
-  const totalPages = useMemo(() => {
-    return Math.ceil(sortedCompanies.length / companiesPerPage)
-  }, [sortedCompanies])
-
-  if (error) return <div>Failed to load</div>
-  if (!companies) return <div>Loading...</div>
+  if (!companies || companies.length === 0) {
+    return (
+      <div className="flex items-center justify-center min-h-[400px]">
+        <p className="text-gray-600">Loading companies...</p>
+      </div>
+    );
+  }
 
   const sections = [
     { id: "about", title: "Who Are We" },
@@ -241,12 +265,12 @@ export default function CareerPage() {
                       <h4 className="text-lg font-semibold mb-2">Amsal Sir</h4>
                       <p className="text-gray-600 text-sm mb-4">Specializing in placement guidance and career development strategies</p>
                       <ShimmerButton
-                        onClick={() => window.open('https://calendly.com/uni-husam/consulation-call', '_blank')}
+                        onClick={() => window.location.href = '/error-universal'}
                         shimmerColor="#ffffff"
                         background="linear-gradient(135deg, #fc4707 0%, #ff6b3d 100%)"
                         className="font-medium px-4 py-2 rounded-full text-white text-sm w-full sm:w-auto"
                       >
-                        Amsal Sir
+                        Schedule Meeting
                       </ShimmerButton>
                     </div>
                   </div>
@@ -262,12 +286,12 @@ export default function CareerPage() {
                       <h4 className="text-lg font-semibold mb-2">Abdul Razzak Sir</h4>
                       <p className="text-gray-600 text-sm mb-4">Focusing on internship opportunities and industry connections</p>
                       <ShimmerButton
-                        onClick={() => window.open('https://calendly.com/uni-husam/consulation-call', '_blank')}
+                        onClick={() => window.location.href = '/error-universal'}
                         shimmerColor="#ffffff"
                         background="linear-gradient(135deg, #fc4707 0%, #ff6b3d 100%)"
                         className="font-medium px-4 py-2 rounded-full text-white text-sm w-full sm:w-auto"
                       >
-                        Abdul Razzak Sir
+                        Schedule Meeting
                       </ShimmerButton>
                     </div>
                   </div>
@@ -283,52 +307,10 @@ export default function CareerPage() {
         <h2 className="text-2xl font-semibold mb-6">List of Companies</h2>
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:border-[#fc4707] transition-colors">
           <div className="p-6">
-            <div className="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4">
+            <div className="flex justify-end mb-6">
               <p className="text-sm text-gray-500">
                 Found {sortedCompanies.length} companies
               </p>
-              <Popover open={open} onOpenChange={setOpen}>
-                <PopoverTrigger asChild>
-                  <Button
-                    variant="outline"
-                    role="combobox"
-                    aria-expanded={open}
-                    className="w-[200px] justify-between rounded-full hover:border-[#fc4707] hover:text-[#fc4707] transition-colors"
-                  >
-                    {value
-                      ? `Filter: ${sortOptions.find((option) => option.value === value)?.label}`
-                      : "Filter by PS Type"}
-                    <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
-                  </Button>
-                </PopoverTrigger>
-                <PopoverContent className="w-[200px] p-0" align="end">
-                  <Command>
-                    <CommandInput placeholder="Search PS type..." />
-                    <CommandEmpty>No PS type found.</CommandEmpty>
-                    <CommandGroup heading="Practice School Type">
-                      {sortOptions.map((option) => (
-                        <CommandItem
-                          key={option.value}
-                          value={option.value}
-                          onSelect={(currentValue) => {
-                            setValue(currentValue === value ? "" : currentValue)
-                            setOpen(false)
-                          }}
-                          className="cursor-pointer"
-                        >
-                          <Check
-                            className={cn(
-                              "mr-2 h-4 w-4",
-                              value === option.value ? "opacity-100" : "opacity-0"
-                            )}
-                          />
-                          {option.label}
-                        </CommandItem>
-                      ))}
-                    </CommandGroup>
-                  </Command>
-                </PopoverContent>
-              </Popover>
             </div>
             
             <div className="border rounded-xl overflow-hidden">
