@@ -1,13 +1,14 @@
 "use client";
 
 import React from "react";
-
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 interface Avatar {
   imageUrl: string;
   profileUrl: string;
 }
+
 interface AvatarCirclesProps {
   className?: string;
   numPeople?: number;
@@ -27,14 +28,15 @@ const AvatarCircles = ({
           href={url.profileUrl}
           target="_blank"
           rel="noopener noreferrer"
+          className="relative"
         >
-          <img
-            key={index}
-            className="h-10 w-10 rounded-full border-2 border-white dark:border-gray-800"
+          <Image
+            className="h-10 w-10 rounded-full border-2 border-white dark:border-gray-800 object-cover"
             src={url.imageUrl}
             width={40}
             height={40}
             alt={`Avatar ${index + 1}`}
+            unoptimized={url.imageUrl.startsWith('data:') || url.imageUrl.startsWith('blob:')}
           />
         </a>
       ))}
