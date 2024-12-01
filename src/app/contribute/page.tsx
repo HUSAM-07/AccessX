@@ -62,7 +62,7 @@ export default function ContributePage() {
     {
       icon: <MessageSquare className="w-12 h-12 text-black" />,
       title: "Community",
-      description: "Join our Discord for real-time collaboration"
+      description: "Discuss and collaborate with fellow batchmates while developing real-world projects"
     },
     {
       icon: <FileCode className="w-12 h-12 text-black" />,
