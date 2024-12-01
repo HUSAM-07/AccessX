@@ -132,7 +132,7 @@ function MobileMenu() {
           </Button>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
-          <Button asChild variant="outline" className="w-full justify-start">
+          <Button asChild variant="outline" className="w-full justify-start border-orange-200 bg-orange-50 hover:bg-orange-100 hover:text-orange-900 text-orange-700">
             <a href="/contribute" className="inline-flex items-center justify-start w-full">
               Contribute
               <GitBranch className="ml-auto h-4 w-4" />
