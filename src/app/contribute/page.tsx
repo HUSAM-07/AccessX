@@ -110,7 +110,7 @@ export default function ContributePage() {
 
   const contributors = [
     {
-      imageUrl: "https://github.com/HUSAM-07.png",
+      imageUrl: "/contributors/husam.jpg",
       profileUrl: "https://github.com/HUSAM-07"
     },
     // Add more contributors as needed
