@@ -92,9 +92,21 @@ const Footer: React.FC = () => {
             <AccordionItem value="support-us">
               <AccordionTrigger>Support Us</AccordionTrigger>
               <AccordionContent>
-                <Link href="https://www.buymeacoffee.com/yourname" className="text-gray-600 hover:text-gray-900 flex items-center">
+                <Link href="https://buymeacoffee.com/unihusam" className="text-gray-600 hover:text-gray-900 flex items-center">
                   <PersonIcon className="h-4 w-4 mr-2" />
                   Thank the Author
+                </Link>
+              </AccordionContent>
+              <AccordionContent>
+                <Link href="/contribute" className="text-gray-600 hover:text-gray-900 flex items-center">
+                  <GitBranch className="h-4 w-4 mr-2" />
+                  Contribute as a Developer
+                </Link>
+              </AccordionContent>
+              <AccordionContent>
+                <Link href="/secondary-pages/author" className="text-gray-600 hover:text-gray-900 flex items-center">
+                  <Signature className="h-4 w-4 mr-2" />
+                  Author Page
                 </Link>
               </AccordionContent>
             </AccordionItem>
