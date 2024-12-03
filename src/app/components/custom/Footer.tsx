@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
               <GitBranch className="h-4 w-4 mr-2" />
               Contribute as a Developer
             </Link>
-            <Link href="/secondary-pages/author" className="text-gray-600 hover:text-gray-900 flex items-center">
+            <Link href="/author" className="text-gray-600 hover:text-gray-900 flex items-center">
               <Signature className="h-4 w-4 mr-2" />
               Author Page
             </Link>
@@ -104,7 +104,7 @@ const Footer: React.FC = () => {
                 </Link>
               </AccordionContent>
               <AccordionContent>
-                <Link href="/secondary-pages/author" className="text-gray-600 hover:text-gray-900 flex items-center">
+                <Link href="/author" className="text-gray-600 hover:text-gray-900 flex items-center">
                   <Signature className="h-4 w-4 mr-2" />
                   Author Page
                 </Link>
