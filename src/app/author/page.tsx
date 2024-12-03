@@ -7,23 +7,30 @@ import { ArrowUpRight, Github, Mail, Twitter } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import AnimatedShinyText from "@/components/ui/animated-shiny-text"
 import { BorderBeam } from "@/components/ui/border-beam"
-import { Meteors } from "@/components/ui/meteors"
+import { DotPattern } from "@/components/magicui/dot-pattern"
 
 const AuthorPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
-      {/* Main content wrapper with meteors */}
+      {/* Main content wrapper with dot pattern */}
       <div className="relative overflow-hidden">
-        {/* Meteors Background - Contained within main content */}
+        {/* Dot Pattern Background */}
         <div className="absolute inset-0 w-full h-full">
-          <Meteors number={40} />
+          <DotPattern
+            width={32}
+            height={32}
+            cx={2}
+            cy={2}
+            cr={1.5}
+            className="opacity-50 blur-[0.5px]"
+          />
         </div>
 
         {/* Content Wrapper */}
-        <div className="relative backdrop-blur-[2px] z-10">
+        <div className="relative z-10">
           <main className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
             {/* Hero Section */}
-            <div className="flex flex-col md:flex-row gap-12 items-center mb-16 bg-white/60 backdrop-blur-sm p-8 rounded-3xl">
+            <div className="flex flex-col md:flex-row gap-12 items-center mb-16 bg-white/90 backdrop-blur-sm p-8 rounded-3xl">
               <div className="flex-1 space-y-8">
                 {/* Say Hello Button - Now at the top */}
                 <Button 
@@ -95,7 +102,7 @@ const AuthorPage: React.FC = () => {
             </div>
 
             {/* About Section */}
-            <div className="mb-16 bg-white/60 backdrop-blur-sm p-8 rounded-3xl">
+            <div className="mb-16 bg-white/90 backdrop-blur-sm p-8 rounded-3xl">
               <h2 className="text-2xl font-semibold mb-6">About</h2>
               <div className="prose prose-lg max-w-none text-gray-600">
                 <p className="leading-relaxed">
@@ -147,7 +154,7 @@ const AuthorPage: React.FC = () => {
             </div>
 
             {/* Projects Section - using consistent card styling */}
-            <div className="bg-white/60 backdrop-blur-sm p-8 rounded-3xl">
+            <div className="bg-white/90 backdrop-blur-sm p-8 rounded-3xl">
               <h2 className="text-2xl font-semibold mb-6">Featured Projects</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
