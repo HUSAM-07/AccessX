@@ -63,19 +63,6 @@ function DesktopMenu() {
             </NavigationMenuLink>
           </Button>
         </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Button 
-            asChild 
-            variant="outline" 
-            size="sm"
-            className="border-orange-200 bg-orange-50 hover:bg-orange-100 hover:text-orange-900 text-orange-700 text-xs px-4 py-1 rounded-full"
-          >
-            <NavigationMenuLink className="inline-flex items-center" href="/contribute">
-              Contribute
-              <GitBranch className="ml-1 h-3 w-3" />
-            </NavigationMenuLink>
-          </Button>
-        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   );
@@ -132,18 +119,6 @@ function MobileMenu() {
             <a href="/dashboard" className="inline-flex items-center justify-start w-full">
               Access LMS, ERP, and more
               <Sparkle className="ml-auto h-4 w-4" />
-            </a>
-          </Button>
-        </DropdownMenuItem>
-        <DropdownMenuItem asChild>
-          <Button 
-            asChild 
-            variant="outline" 
-            className="w-full justify-start rounded-full border-orange-200 bg-orange-50 hover:bg-orange-100 hover:text-orange-900 text-orange-700 my-1"
-          >
-            <a href="/contribute" className="inline-flex items-center justify-start w-full">
-              Contribute
-              <GitBranch className="ml-auto h-4 w-4" />
             </a>
           </Button>
         </DropdownMenuItem>
