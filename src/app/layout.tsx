@@ -43,7 +43,7 @@ function DesktopMenu() {
           <NavigationMenuLink className="hover:underline text-sm" href="/courses">Pathways</NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Button asChild variant="outline" size="sm" className="text-xs px-2 py-1">
+          <Button asChild variant="outline" size="sm" className="text-xs px-4 py-1 rounded-full">
             <NavigationMenuLink className="inline-flex items-center" href="/career">
               Career Guidance
               <BackpackIcon className="ml-1 h-3 w-3" />
@@ -55,7 +55,7 @@ function DesktopMenu() {
             asChild 
             variant="outline" 
             size="sm"
-            className="border-purple-200 bg-purple-50 hover:bg-purple-100 hover:text-purple-900 text-purple-700 text-xs px-2 py-1"
+            className="border-purple-200 bg-purple-50 hover:bg-purple-100 hover:text-purple-900 text-purple-700 text-xs px-4 py-1 rounded-full"
           >
             <NavigationMenuLink className="inline-flex items-center" href="/dashboard">
               Access LMS, ERP
@@ -68,7 +68,7 @@ function DesktopMenu() {
             asChild 
             variant="outline" 
             size="sm"
-            className="border-orange-200 bg-orange-50 hover:bg-orange-100 hover:text-orange-900 text-orange-700 text-xs px-2 py-1"
+            className="border-orange-200 bg-orange-50 hover:bg-orange-100 hover:text-orange-900 text-orange-700 text-xs px-4 py-1 rounded-full"
           >
             <NavigationMenuLink className="inline-flex items-center" href="/contribute">
               Contribute
@@ -87,7 +87,7 @@ function MobileMenu() {
       <DropdownMenuTrigger className="md:hidden p-2">
         <Menu className="h-6 w-6" />
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent align="end" className="w-56 rounded-2xl">
         <DropdownMenuItem>
           <a href="/" className="w-full inline-flex items-center">
             Home
@@ -112,7 +112,11 @@ function MobileMenu() {
           <a href="/courses" className="w-full">Pathways</a>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
-          <Button asChild variant="outline" className="w-full justify-start">
+          <Button 
+            asChild 
+            variant="outline" 
+            className="w-full justify-start rounded-full my-1"
+          >
             <a href="/career" className="inline-flex items-center justify-start w-full">
               Career Guidance
               <BackpackIcon className="ml-auto h-4 w-4" />
@@ -123,7 +127,7 @@ function MobileMenu() {
           <Button
             asChild 
             variant="outline" 
-            className="w-full justify-start border-purple-200 bg-purple-50 hover:bg-purple-100 hover:text-purple-900 text-purple-700"
+            className="w-full justify-start rounded-full border-purple-200 bg-purple-50 hover:bg-purple-100 hover:text-purple-900 text-purple-700 my-1"
           >
             <a href="/dashboard" className="inline-flex items-center justify-start w-full">
               Access LMS, ERP, and more
@@ -132,7 +136,11 @@ function MobileMenu() {
           </Button>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
-          <Button asChild variant="outline" className="w-full justify-start border-orange-200 bg-orange-50 hover:bg-orange-100 hover:text-orange-900 text-orange-700">
+          <Button 
+            asChild 
+            variant="outline" 
+            className="w-full justify-start rounded-full border-orange-200 bg-orange-50 hover:bg-orange-100 hover:text-orange-900 text-orange-700 my-1"
+          >
             <a href="/contribute" className="inline-flex items-center justify-start w-full">
               Contribute
               <GitBranch className="ml-auto h-4 w-4" />

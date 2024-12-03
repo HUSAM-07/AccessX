@@ -56,7 +56,7 @@ const Dashboard: React.FC = () => {
         <h2 className="text-3xl font-bold mb-8 text-gray-800">Dashboard</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {portalLinks.map((portal, index) => (
-            <Card key={index} className="bg-white hover:shadow-lg transition-shadow flex flex-col h-full">
+            <Card key={index} className="bg-white hover:shadow-lg transition-shadow flex flex-col h-full rounded-3xl border border-gray-200">
               <CardHeader>
                 <CardTitle>{portal.title}</CardTitle>
                 <CardDescription>{portal.description}</CardDescription>
@@ -65,9 +65,19 @@ const Dashboard: React.FC = () => {
                 {/* You can add additional content here if needed */}
               </CardContent>
               <CardFooter className="mt-auto">
-                <Button asChild className="w-full">
-                  <a href={portal.url} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="mr-2 h-4 w-4" /> Go to Resource
+                <Button 
+                  asChild 
+                  className="w-full rounded-full hover:shadow-md transition-all bg-gray-900 text-white hover:bg-[#fc4707]"
+                  variant="outline"
+                >
+                  <a 
+                    href={portal.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2"
+                  >
+                    <ExternalLink className="h-4 w-4" /> 
+                    Go to Resource
                   </a>
                 </Button>
               </CardFooter>

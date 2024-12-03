@@ -1,4 +1,5 @@
 import React from 'react';
+import { ExternalLink } from 'lucide-react';
 
 const portalLinks = [
     { title: 'BITS ERP', url: 'https://erp.bits-pilani.ac.in/', description: 'The main website for registration, academic progress, and grading' },
@@ -21,10 +22,14 @@ const Dashboard: React.FC = () => {
                         href={portal.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block p-4 border border-gray-300 rounded-lg hover:shadow-md transition-shadow"
+                        className="block p-6 border border-gray-300 rounded-3xl hover:shadow-md transition-all group"
                     >
                         <h3 className="text-lg font-semibold mb-2">{portal.title}</h3>
-                        <p className="text-sm text-gray-600">{portal.description}</p>
+                        <p className="text-sm text-gray-600 mb-4">{portal.description}</p>
+                        <div className="text-gray-900 text-sm font-medium hover:text-[#fc4707] transition-colors inline-flex items-center">
+                            Go to Resource
+                            <ExternalLink className="ml-2 h-4 w-4" />
+                        </div>
                     </a>
                 ))}
             </div>
