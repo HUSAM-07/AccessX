@@ -62,6 +62,15 @@ const LandingPage: React.FC = () => {
         </div>
       </nav>
       <main className="flex-grow flex flex-col items-center justify-center px-4 max-w-4xl mx-auto text-center">
+        <div className="relative w-full max-w-[600px] aspect-[16/9] mb-8">
+          <Image
+            src="/hero-illustration.png"
+            alt="UniDash Platform Preview"
+            fill
+            className="object-cover rounded-2xl"
+            priority
+          />
+        </div>
         <div className="text-sm mb-4 flex items-center justify-center">
           <Image src="/bits.png" alt="Student Council Logo" width={24} height={24} className="mr-2 rounded-full" />
           <span className="text-xs sm:text-sm">Trusted by Students at BITS Pilani Dubai Campus</span>

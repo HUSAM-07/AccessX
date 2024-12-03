@@ -3,17 +3,19 @@
 import React from 'react'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { ExternalLinkIcon, InstagramLogoIcon, LinkedInLogoIcon, TwitterLogoIcon, PersonIcon, BackpackIcon, GitHubLogoIcon } from '@radix-ui/react-icons'
+import { GitBranch, Signature } from 'lucide-react'
 import Link from 'next/link'
 
 const footerSections = [
   {
     title: 'Resources',
     links: [
+      { name: 'Home', href: '/' },
+      { name: 'Dashboard', href: '/dashboard' },
       { name: 'Attendance Tracker', href: '/attendance-tracker' },
       { name: 'Course Handouts', href: '/course-handouts' },
       { name: 'PYQ Analyzer', href: '/paper-analysis' },
       { name: 'Career Services', href: '/career' },
-      { name: 'Resume Generator', href: '/resume-generator' },
     ]
   },
   {
@@ -55,6 +57,14 @@ const Footer: React.FC = () => {
             <Link href="https://buymeacoffee.com/unihusam" className="text-gray-600 hover:text-gray-900 flex items-center">
               <PersonIcon className="h-4 w-4 mr-2" />
               Thank the Author
+            </Link>
+            <Link href="/contribute" className="text-gray-600 hover:text-gray-900 flex items-center">
+              <GitBranch className="h-4 w-4 mr-2" />
+              Contribute as a Developer
+            </Link>
+            <Link href="/secondary-pages/author" className="text-gray-600 hover:text-gray-900 flex items-center">
+              <Signature className="h-4 w-4 mr-2" />
+              Author Page
             </Link>
           </div>
         </div>
