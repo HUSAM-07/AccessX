@@ -34,7 +34,7 @@ import ShimmerButton from "@/components/magicui/shimmer-button"
 import { Button } from "@/components/ui/button"
 
 export default function ContributePage() {
-  const branchingDiagram = `flowchart TD
+  const branchingDiagram = `flowchart LR
     A[Branch Types] --> B[feature/]
     A --> C[bugfix/]
     A --> D[hotfix/]
