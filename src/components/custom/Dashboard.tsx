@@ -4,6 +4,8 @@ import React from 'react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ExternalLink } from 'lucide-react'
+
+// Move this to a separate config file for better maintainability
 import { portalLinks } from '@/config/portal-links'
 
 const Dashboard = () => {
@@ -12,9 +14,9 @@ const Dashboard = () => {
       <div className="max-w-7xl mx-auto px-4 py-8">
         <h2 className="text-3xl font-bold mb-8 text-gray-800">Dashboard</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {portalLinks.map((portal) => (
+          {portalLinks.map((portal, index) => (
             <Card 
-              key={portal.title}
+              key={portal.title} // Use meaningful key instead of index
               className="bg-white hover:shadow-lg transition-shadow flex flex-col h-full rounded-3xl border border-gray-200"
             >
               <CardHeader>
@@ -46,4 +48,4 @@ const Dashboard = () => {
   )
 }
 
-export default Dashboard
+export default Dashboard 

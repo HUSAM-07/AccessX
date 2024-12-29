@@ -33,7 +33,6 @@ UniDash simplifies university life by bringing all your academic tools and resou
 - **Framework**: Next.js 14
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS + Radix UI/Shadcn
-- **Authentication**: Firebase
 - **Data Management**: 
   - SWR for fetching
   - React Hooks for state

@@ -57,7 +57,7 @@ const LandingPage = () => {
             onClick={() => router.push('/dashboard')}
             className="bg-black text-white px-6 py-3 rounded-full w-full sm:w-auto"
           >
-            Access Dashboard
+            Go to Dashboard
           </Button>
           <span className="text-sm sm:text-base">Join 1000+ faculty and students</span>
         </div>

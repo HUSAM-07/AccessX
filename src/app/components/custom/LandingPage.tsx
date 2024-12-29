@@ -1,51 +1,12 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { Button } from "@/components/ui/button"
-import { User } from 'firebase/auth'
 
-const LandingPage: React.FC = () => {
+const LandingPage = () => {
   const router = useRouter()
-  const [user, setUser] = useState<User | null>(null)
-  const [loading, setLoading] = useState(true)
-  const [authError, setAuthError] = useState<string | null>(null)
-
-  useEffect(() => {
-    const initializeAuth = async () => {
-      const { auth } = await import('@/lib/firebase')
-      if (auth) {
-        const unsubscribe = auth.onAuthStateChanged((user) => {
-          setUser(user)
-          setLoading(false)
-        })
-        return () => unsubscribe()
-      } else {
-        setLoading(false)
-      }
-    }
-    initializeAuth()
-  }, [])
-
-  const handleNavigation = async () => {
-    if (user) {
-      router.push('/dashboard')
-    } else {
-      try {
-        const { auth } = await import('@/lib/firebase')
-        const { signInWithPopup, GoogleAuthProvider } = await import('firebase/auth')
-        if (auth) {
-          const provider = new GoogleAuthProvider()
-          await signInWithPopup(auth, provider)
-          router.push('/dashboard')
-        }
-      } catch (error) {
-        console.error('Authentication error:', error)
-        setAuthError('Failed to sign in. Please try again.')
-      }
-    }
-  }
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -53,11 +14,11 @@ const LandingPage: React.FC = () => {
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <h1 className="text-2xl font-bold">UniDash</h1>
           <Button 
-            onClick={handleNavigation}
+            onClick={() => router.push('/dashboard')}
             variant="outline"
             className="rounded-full"
           >
-            {user ? 'Dashboard' : 'Log in'}
+            Dashboard
           </Button>
         </div>
       </nav>
@@ -83,14 +44,13 @@ const LandingPage: React.FC = () => {
         </p>
         <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
           <Button 
-            onClick={handleNavigation}
+            onClick={() => router.push('/dashboard')}
             className="bg-black text-white px-6 py-3 rounded-full w-full sm:w-auto"
           >
-            {loading ? 'Loading...' : (user ? 'Go to Dashboard' : 'Sign In')}
+            Dashboard
           </Button>
           <span className="text-sm sm:text-base">Join 1000+ faculty and students</span>
         </div>
-        {authError && <p className="text-red-500 mt-4">{authError}</p>}
       </main>
     </div>
   )

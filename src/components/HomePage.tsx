@@ -1,18 +1,15 @@
 "use client";
 
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import { Button } from "@/components/ui/button";
 import Image from 'next/image';
 
-interface HomePageProps {
-  onEnter: () => void;
-  navigation: React.ReactNode;
-}
+function HomePage() {
+  const router = useRouter();
 
-function HomePage({ onEnter, navigation }: HomePageProps) {
   return (
     <div className="min-h-screen flex flex-col">
-      {navigation}
       <main className="flex-grow flex flex-col items-center justify-center px-4 max-w-4xl mx-auto text-center">
         <div className="text-sm mb-4 flex items-center justify-center">
           <Image
@@ -34,10 +31,10 @@ function HomePage({ onEnter, navigation }: HomePageProps) {
 
         <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
           <Button 
-            onClick={onEnter} 
+            onClick={() => router.push('/dashboard')}
             className="bg-black text-white px-6 py-3 rounded-full w-full sm:w-auto"
           >
-            Access Dashboard
+            Go to Dashboard
           </Button>
           <span className="text-sm sm:text-base">Join 1000+ faculty and students</span>
         </div>
