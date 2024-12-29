@@ -39,7 +39,7 @@ const LandingPage = () => {
             src="/bits.png" 
             alt="Student Council Logo" 
             width={24} 
-            height={24} 
+            height={24}
             className="mr-2 rounded-full"
             loading="eager"
           />
