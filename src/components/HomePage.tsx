@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import Link from 'next/link';
 import Image from 'next/image';
 
 interface HomePageProps {
@@ -19,9 +18,10 @@ function HomePage({ onEnter, navigation }: HomePageProps) {
           <Image
             src="/bits.png"
             alt="Student Council Logo"
-            width={500} // Specify the width
-            height={300} // Specify the height
-            className="w-6 h-6 mr-2 rounded-full"
+            width={24}
+            height={24}
+            className="mr-2 rounded-full"
+            loading="eager"
           />
           <span className="text-xs sm:text-sm">Backed by Student Council BITS Pilani Dubai Campus</span>
         </div>
@@ -31,6 +31,7 @@ function HomePage({ onEnter, navigation }: HomePageProps) {
         <p className="text-base sm:text-lg md:text-xl mb-8">
           Quickly find info about course requirements, simplify resources navigation, be organized. Save hours on your academic planning.
         </p>
+
         <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
           <Button 
             onClick={onEnter} 
