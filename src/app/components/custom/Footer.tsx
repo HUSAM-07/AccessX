@@ -117,9 +117,9 @@ const Footer: React.FC = () => {
         <div className="mt-8 pt-8 border-t text-center text-sm text-gray-500">
           <p>© 2024 UniDash All Rights Reserved.</p>
           <div className="mt-2 space-x-4">
-            <Link href="#" className="hover:text-gray-900">Privacy Policy</Link>
-            <Link href="#" className="hover:text-gray-900">Terms of Service</Link>
-            <Link href="#" className="hover:text-gray-900">Cookies Settings</Link>
+            <Link href="/contribute" className="hover:text-gray-900">Privacy Policy</Link>
+            <Link href="/contribute" className="hover:text-gray-900">Terms of Service</Link>
+            <Link href="/contribute" className="hover:text-gray-900">Cookies Settings</Link>
           </div>
         </div>
       </div>
