@@ -36,7 +36,7 @@ function HomePage({ onEnter, navigation }: HomePageProps) {
             onClick={onEnter} 
             className="bg-black text-white px-6 py-3 rounded-full w-full sm:w-auto"
           >
-            Go to Dashboard
+            Access Dashboard
           </Button>
           <span className="text-sm sm:text-base">Join 1000+ faculty and students</span>
         </div>
