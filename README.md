@@ -8,6 +8,10 @@ UniDash simplifies university life by bringing all your academic tools and resou
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
 [![Tailwind](https://img.shields.io/badge/Tailwind-3.0-38bdf8)](https://tailwindcss.com/)
 
+## Stats
+
+![Alt](https://repobeats.axiom.co/api/embed/1edd231d5e843eed2eea3b2dd9aaab219b50d487.svg "Repobeats analytics image")
+
 ## 🚀 Key Features
 
 ### 📱 Core Functionality
