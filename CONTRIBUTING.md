@@ -34,7 +34,7 @@ D --> E[Start Development]
 
 2. **Clone Your Fork**
    ```bash
-   git clone [https://github.com/your-username/unidash.git](https://github.com/HUSAM-07/AccessX.git)
+   git clone [https://github.com/your-username/AccessX.git](https://github.com/HUSAM-07/AccessX.git)
    cd unidash
    ```
 
