@@ -1,26 +1,17 @@
 import React from 'react';
-import { Button } from "@/components/ui/button";
-import Link from 'next/link';
 import { FAQ } from "@/components/ui/faq-section";
+import { AnimatedHero } from "@/components/ui/animated-hero";
 
 export default function PaperAnalysisPage() {
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-2">Previous Year Paper Analysis</h1>
-      <p className="mb-6 text-gray-600">
-        Combine all of the PYQs into a single PDF and upload to the site.
-        <br />
-        <em>The tool used is an open-sourced tool and will never be charged.</em>
-        <br />
-        <em>We believe in building our own tools or using open-sourced tools to build on top of it.</em>
-      </p>
-      <Link href="https://elicit.com/" target="_blank" rel="noopener noreferrer">
-        <Button className="bg-blue-500 hover:bg-blue-600 text-white mb-16">
-          Analyze Papers with Elicit
-        </Button>
-      </Link>
+      <AnimatedHero 
+        title="Previous Year Paper Analysis"
+        description="Combine all of the PYQs into a single PDF and upload to the site. The tool used is an open-sourced tool and will never be charged. We believe in building our own tools or using open-sourced tools to build on top of it."
+        ctaText="Analyze Papers with Elicit"
+        ctaLink="https://elicit.com/"
+      />
 
-      {/* FAQ Section with custom content for paper analysis */}
       <FAQ 
         title="Paper Analysis FAQ"
         description="Common questions about our idea of analyzing previous year papers"
