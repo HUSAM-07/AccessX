@@ -136,6 +136,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <BannerDemo />
         <header className="flex justify-between items-center p-4 md:px-8 border-b border-gray-200">
           <nav className="w-full">
             <DesktopMenu />
