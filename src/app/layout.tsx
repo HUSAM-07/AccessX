@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/app/components/custom/Footer";
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu";
+import { BannerDemo } from "@/components/popup-banner";
 import { Menu, Sparkle, AtSign, GitBranch } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BackpackIcon } from "@radix-ui/react-icons";
