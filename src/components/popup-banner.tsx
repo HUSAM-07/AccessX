@@ -14,7 +14,7 @@ export function BannerDemo() {
       icon={<GraduationCap className="m-px h-4 w-4 text-blue-800" />}
       title={
         <>
-          Get early access to <span className="font-semibold">UAE internship opportunities</span> - Sign up with your university email.
+          Get early access to <span className="font-semibold">UAE internship opportunities</span> - Sign up with your university email. <br />
         </>
       }
       action={{
