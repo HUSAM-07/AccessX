@@ -14,14 +14,14 @@ export function BannerDemo() {
       icon={<GraduationCap className="m-px h-4 w-4 text-blue-800" />}
       title={
         <>
-          Get early access to <span className="font-semibold">UAE internship opportunities</span> - Sign up with your university email. <br />
+          We&apos;re launching <span className="font-semibold">WRKFORCE — A platform for accessing internship opportunities in UAE</span> - Get early access. <br />
         </>
       }
       action={{
         label: "Sign Up",
-        onClick: () => window.location.href = "https://internships.ihusam.tech/",
+        onClick: () => window.location.href = "https://wrkforceae.com/",
       }}
-      learnMoreUrl="https://internships.ihusam.tech/"
+      learnMoreUrl="https://wrkforceae.com/"
     />
   )
 }
