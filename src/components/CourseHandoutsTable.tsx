@@ -40,7 +40,12 @@ const courseHandouts = [
   { id:13, course: "Environmental Studies", filename: "Environmental Studies.pdf", courseType: "Core Elective(Ungraded)"},
   { id:14, course: "International Law", filename: "International Law.docx", courseType: "Open Elective"},
   { id:15, course: "Machine Learning", filename: "Machine Learning.pdf", courseType: "CS Elective"},
-  { id:16, course: "Modern Political Concepts", filename: "Modern Political Concepts.doc", courseType: "Open Elective"}
+  { id:16, course: "Modern Political Concepts", filename: "Modern Political Concepts.doc", courseType: "Open Elective"},
+  { id:17, course: "Industrial Microbiology & Bioprocess Engineering", filename: "BIOT F314 Industrial Microbiol Bioprocess Engg.pdf", courseType: "BIOT Elective"},
+  { id:18, course: "Proteomics", filename: "BIOT F345 Proteomics.pdf", courseType: "BIOT Elective"},
+  { id:19, course: "Intro to Pharm Biotech", filename: "BIOT F416 Intro to Pharm Biotech.pdf", courseType: "BIOT Core"},
+  { id:20, course: "Downstream Processing", filename: "BIOT F344 Downstream Processing.pdf", courseType: "BIOT Elective"},
+  { id:21, course: "Immunology", filename: "BIOT F342 Immunology.pdf", courseType: "BIOT Elective"},
 
 
   // Add more handouts as needed
