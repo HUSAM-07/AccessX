@@ -2,13 +2,21 @@ import ShimmerButton from "@/components/magicui/shimmer-button";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { AnimatedHero } from "@/components/ui/animated-hero";
 
 export default function ComingSoonPage() {
   return (
     <div className="min-h-screen bg-white flex flex-col items-center justify-center p-6">
       <div className="w-full max-w-3xl space-y-10 text-center">
-        {/* Error Code */}
-        <div className="text-sm font-medium text-gray-500">404 error</div>
+        {/* Animated Hero for Resume Optimizer */}
+        <div>
+          <AnimatedHero
+            title="Resume Optimizer"
+            description="Get AI-powered insights to improve your resume for your dream PS Station"
+            ctaText="Try Resume Optimizer"
+            ctaLink="https://resume-analyzer.ihusam.tech/"
+          />
+        </div>
 
         {/* Main Content */}
         <div className="space-y-4">
