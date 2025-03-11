@@ -137,7 +137,7 @@ export default function CareerPage() {
           
           <div className="relative w-full max-w-3xl mx-auto aspect-[16/9] rounded-3xl overflow-hidden">
             <Image
-              src="/career-illustrations.png"
+              src="/career-illustrations.jpg"
               alt="Career Services Illustration"
               fill
               className="object-cover"
