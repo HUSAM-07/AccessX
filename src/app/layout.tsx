@@ -8,6 +8,8 @@ import { BannerDemo } from "@/components/popup-banner";
 import { Menu, Sparkle, AtSign, GitBranch } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BackpackIcon } from "@radix-ui/react-icons";
+import { ThemeProvider } from "@/components/theme-provider";
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -134,17 +136,27 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <BannerDemo />
-        <header className="flex justify-between items-center p-4 md:px-8 border-b border-gray-200">
-          <nav className="w-full">
-            <DesktopMenu />
-            <MobileMenu />
-          </nav>
-        </header>
-        <main className="max-w-full px-4 md:px-8">{children}</main>
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <BannerDemo />
+          <header className="flex justify-between items-center p-4 md:px-8 border-b border-border">
+            <nav className="w-full">
+              <DesktopMenu />
+              <MobileMenu />
+            </nav>
+            <div className="flex items-center">
+              <AnimatedThemeToggler className="p-2 rounded-md hover:bg-accent transition-colors" />
+            </div>
+          </header>
+          <main className="max-w-full px-4 md:px-8">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

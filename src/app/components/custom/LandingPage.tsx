@@ -45,7 +45,7 @@ const LandingPage = () => {
         <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
           <Button 
             onClick={() => router.push('/dashboard')}
-            className="bg-black text-white px-6 py-3 rounded-full w-full sm:w-auto"
+            className="bg-primary text-primary-foreground px-6 py-3 rounded-full w-full sm:w-auto hover:bg-primary/90"
           >
             Dashboard
           </Button>

@@ -12,12 +12,12 @@ const Dashboard = () => {
   return (
     <div className="w-full">
       <div className="max-w-7xl mx-auto px-4 py-8">
-        <h2 className="text-3xl font-bold mb-8 text-gray-800">Dashboard</h2>
+        <h2 className="text-3xl font-bold mb-8 text-foreground">Dashboard</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {portalLinks.map((portal, index) => (
             <Card 
               key={portal.title} // Use meaningful key instead of index
-              className="bg-white hover:shadow-lg transition-shadow flex flex-col h-full rounded-3xl border border-gray-200"
+              className="hover:shadow-lg transition-shadow flex flex-col h-full rounded-3xl"
             >
               <CardHeader>
                 <CardTitle>{portal.title}</CardTitle>
@@ -26,7 +26,7 @@ const Dashboard = () => {
               <CardFooter className="mt-auto">
                 <Button 
                   asChild 
-                  className="w-full rounded-full hover:shadow-md transition-all bg-gray-900 text-white hover:bg-[#fc4707]"
+                  className="w-full rounded-full hover:shadow-md transition-all bg-primary text-primary-foreground hover:bg-[#fc4707]"
                   variant="outline"
                 >
                   <a 
