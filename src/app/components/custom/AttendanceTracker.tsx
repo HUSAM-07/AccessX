@@ -64,7 +64,7 @@ const AttendanceTracker = () => {
   if (!isLoggedIn) {
     return (
       <div className="w-full max-w-6xl mx-auto px-4 py-8 text-center">
-        <h2 className="text-3xl font-bold mb-8 text-gray-800">Attendance Tracker</h2>
+        <h2 className="text-3xl font-bold mb-8 text-foreground">Attendance Tracker</h2>
         <p className="mb-4">Please log in with your BITS Pilani Gmail ID to access the Attendance Tracker.</p>
         <Button
           onClick={handleLogin}
@@ -78,7 +78,7 @@ const AttendanceTracker = () => {
 
   return (
     <div className="w-full max-w-6xl mx-auto px-4 py-8">
-      <h2 className="text-3xl font-bold mb-8 text-gray-800">Attendance Tracker</h2>
+      <h2 className="text-3xl font-bold mb-8 text-foreground">Attendance Tracker</h2>
       <div className="mb-6 flex space-x-4">
         <Select onValueChange={setSelectedSubject} value={selectedSubject}>
           <SelectTrigger className="w-[200px]">

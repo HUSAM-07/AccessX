@@ -17,7 +17,7 @@ export default function CoursesPage() {
           </p>
         </section>
 
-        <Separator className="my-12 bg-gray-100" />
+        <Separator className="my-12 bg-muted" />
 
         <section id="domains">
           <h2 className="text-3xl font-bold">Core Domains</h2>
@@ -70,7 +70,7 @@ export default function CoursesPage() {
           </div>
         </section>
 
-        <Separator className="my-12 bg-gray-100" />
+        <Separator className="my-12 bg-muted" />
 
         {/* Graduation Prerequisites */}
         <section id="prerequisites">
@@ -80,38 +80,38 @@ export default function CoursesPage() {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-[#fc4707] transition-colors">
+            <div className="bg-card p-6 rounded-2xl shadow-sm border border-border hover:border-[#fc4707] transition-colors">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center">
                   <span className="text-[#fc4707] font-bold">5</span>
                 </div>
                 <h3 className="text-xl font-semibold">Open Electives</h3>
               </div>
-              <p className="text-gray-600">
+              <p className="text-muted-foreground">
                 Choose from a wide range of courses across different departments to broaden your knowledge base.
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-[#fc4707] transition-colors">
+            <div className="bg-card p-6 rounded-2xl shadow-sm border border-border hover:border-[#fc4707] transition-colors">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center">
                   <span className="text-[#fc4707] font-bold">4</span>
                 </div>
                 <h3 className="text-xl font-semibold">Disciplinary Electives</h3>
               </div>
-              <p className="text-gray-600">
+              <p className="text-muted-foreground">
                 Specialized courses within your major to deepen your expertise in specific areas.
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-[#fc4707] transition-colors">
+            <div className="bg-card p-6 rounded-2xl shadow-sm border border-border hover:border-[#fc4707] transition-colors">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center">
                   <span className="text-[#fc4707] font-bold">3</span>
                 </div>
                 <h3 className="text-xl font-semibold">Humanities Electives</h3>
               </div>
-              <p className="text-gray-600">
+              <p className="text-muted-foreground">
                 Courses in humanities and social sciences to develop well-rounded perspectives.
               </p>
             </div>

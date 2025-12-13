@@ -43,7 +43,7 @@ export default function UniversalError() {
   }, [])
 
   return (
-    <div className="min-h-[100dvh] w-full flex flex-col items-center justify-center p-4 sm:p-6 text-center relative bg-white">
+    <div className="min-h-[100dvh] w-full flex flex-col items-center justify-center p-4 sm:p-6 text-center relative bg-card">
       <div 
         className="absolute w-[200vw] sm:w-[1200px] h-[200vw] sm:h-[1200px] -z-10"
         style={{
@@ -55,11 +55,11 @@ export default function UniversalError() {
         }}
       />
       
-      <div className="space-y-4 sm:space-y-6 w-full max-w-[380px] sm:max-w-md bg-white rounded-2xl shadow-lg p-6 sm:p-8 border border-gray-100 relative mx-auto">
+      <div className="space-y-4 sm:space-y-6 w-full max-w-[380px] sm:max-w-md bg-card rounded-2xl shadow-lg p-6 sm:p-8 border border-border relative mx-auto">
         <div>
-          <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-3 sm:mb-4">404</h1>
-          <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">Page Not Found</h2>
-          <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">
+          <h1 className="text-5xl sm:text-6xl font-bold text-foreground mb-3 sm:mb-4">404</h1>
+          <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-3 sm:mb-4">Page Not Found</h2>
+          <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6">
             {pun}
           </p>
         </div>

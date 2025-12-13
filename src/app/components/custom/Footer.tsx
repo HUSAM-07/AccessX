@@ -33,17 +33,17 @@ const footerSections = [
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-white border-t">
+    <footer className="bg-background border-t border-border">
       <div className="max-w-7xl mx-auto px-4 py-8">
         {/* Desktop and Tablet Layout */}
         <div className="hidden sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {footerSections.map((section, index) => (
             <div key={index}>
-              <h3 className="font-semibold mb-4">{section.title}</h3>
+              <h3 className="font-semibold mb-4 text-foreground">{section.title}</h3>
               <ul className="space-y-2">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    <Link href={link.href} className="text-gray-600 hover:text-gray-900 flex items-center">
+                    <Link href={link.href} className="text-muted-foreground hover:text-foreground flex items-center transition-colors">
                       {link.name}
                       {'icon' in link && <span className="ml-1">{link.icon}</span>}
                     </Link>
@@ -53,16 +53,16 @@ const Footer: React.FC = () => {
             </div>
           ))}
           <div>
-            <h3 className="font-semibold mb-4">Support Us</h3>
-            <Link href="https://buymeacoffee.com/unihusam" className="text-gray-600 hover:text-gray-900 flex items-center">
+            <h3 className="font-semibold mb-4 text-foreground">Support Us</h3>
+            <Link href="https://buymeacoffee.com/unihusam" className="text-muted-foreground hover:text-foreground flex items-center transition-colors">
               <PersonIcon className="h-4 w-4 mr-2" />
               Thank the Author
             </Link>
-            <Link href="/contribute" className="text-gray-600 hover:text-gray-900 flex items-center">
+            <Link href="/contribute" className="text-muted-foreground hover:text-foreground flex items-center transition-colors">
               <GitBranch className="h-4 w-4 mr-2" />
               Contribute as a Developer
             </Link>
-            <Link href="/author" className="text-gray-600 hover:text-gray-900 flex items-center">
+            <Link href="/author" className="text-muted-foreground hover:text-foreground flex items-center transition-colors">
               <Signature className="h-4 w-4 mr-2" />
               Author Page
             </Link>
@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
                   <ul className="space-y-2">
                     {section.links.map((link, linkIndex) => (
                       <li key={linkIndex}>
-                        <Link href={link.href} className="text-gray-600 hover:text-gray-900 flex items-center">
+                        <Link href={link.href} className="text-muted-foreground hover:text-foreground flex items-center transition-colors">
                           {link.name}
                           {'icon' in link && <span className="ml-1">{link.icon}</span>}
                         </Link>
@@ -92,19 +92,19 @@ const Footer: React.FC = () => {
             <AccordionItem value="support-us">
               <AccordionTrigger>Support Us</AccordionTrigger>
               <AccordionContent>
-                <Link href="https://buymeacoffee.com/unihusam" className="text-gray-600 hover:text-gray-900 flex items-center">
+                <Link href="https://buymeacoffee.com/unihusam" className="text-muted-foreground hover:text-foreground flex items-center transition-colors">
                   <PersonIcon className="h-4 w-4 mr-2" />
                   Thank the Author
                 </Link>
               </AccordionContent>
               <AccordionContent>
-                <Link href="/contribute" className="text-gray-600 hover:text-gray-900 flex items-center">
+                <Link href="/contribute" className="text-muted-foreground hover:text-foreground flex items-center transition-colors">
                   <GitBranch className="h-4 w-4 mr-2" />
                   Contribute as a Developer
                 </Link>
               </AccordionContent>
               <AccordionContent>
-                <Link href="/author" className="text-gray-600 hover:text-gray-900 flex items-center">
+                <Link href="/author" className="text-muted-foreground hover:text-foreground flex items-center transition-colors">
                   <Signature className="h-4 w-4 mr-2" />
                   Author Page
                 </Link>
@@ -114,12 +114,12 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Copyright and Legal Links */}
-        <div className="mt-8 pt-8 border-t text-center text-sm text-gray-500">
+        <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
           <p>© 2024 UniDash All Rights Reserved.</p>
           <div className="mt-2 space-x-4">
-            <Link href="/contribute" className="hover:text-gray-900">Privacy Policy</Link>
-            <Link href="/contribute" className="hover:text-gray-900">Terms of Service</Link>
-            <Link href="/contribute" className="hover:text-gray-900">Cookies Settings</Link>
+            <Link href="/contribute" className="hover:text-foreground transition-colors">Privacy Policy</Link>
+            <Link href="/contribute" className="hover:text-foreground transition-colors">Terms of Service</Link>
+            <Link href="/contribute" className="hover:text-foreground transition-colors">Cookies Settings</Link>
           </div>
         </div>
       </div>

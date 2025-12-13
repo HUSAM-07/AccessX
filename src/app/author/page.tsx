@@ -11,7 +11,7 @@ import { DotPattern } from "@/components/magicui/dot-pattern"
 
 const AuthorPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-card">
       {/* Main content wrapper with dot pattern */}
       <div className="relative overflow-hidden">
         {/* Dot Pattern Background */}
@@ -30,7 +30,7 @@ const AuthorPage: React.FC = () => {
         <div className="relative z-10">
           <main className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
             {/* Hero Section */}
-            <div className="flex flex-col md:flex-row gap-12 items-center mb-16 bg-white/90 backdrop-blur-sm p-8 rounded-3xl">
+            <div className="flex flex-col md:flex-row gap-12 items-center mb-16 bg-card/90 backdrop-blur-sm p-8 rounded-3xl">
               <div className="flex-1 space-y-8">
                 {/* Say Hello Button - Now at the top */}
                 <Button 
@@ -42,7 +42,7 @@ const AuthorPage: React.FC = () => {
                 </Button>
 
                 <div className="space-y-4">
-                  <p className="text-sm sm:text-base text-gray-600">Hi, I'm Husam 👋</p>
+                  <p className="text-sm sm:text-base text-muted-foreground">Hi, I'm Husam 👋</p>
                   <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
                     Software Engineer. I love building things and helping people.
                   </h1>
@@ -53,20 +53,20 @@ const AuthorPage: React.FC = () => {
                   <Link 
                     href="https://github.com/HUSAM-07" 
                     target="_blank"
-                    className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                    className="p-2 hover:bg-muted rounded-full transition-colors"
                   >
                     <Github className="w-6 h-6" />
                   </Link>
                   <Link 
                     href="https://x.com/HU_SAM007" 
                     target="_blank"
-                    className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                    className="p-2 hover:bg-muted rounded-full transition-colors"
                   >
                     <Twitter className="w-6 h-6" />
                   </Link>
                   <Link 
                     href="mailto:workforhusam@gmail.com"
-                    className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                    className="p-2 hover:bg-muted rounded-full transition-colors"
                   >
                     <Mail className="w-6 h-6" />
                   </Link>
@@ -102,9 +102,9 @@ const AuthorPage: React.FC = () => {
             </div>
 
             {/* About Section */}
-            <div className="mb-16 bg-white/90 backdrop-blur-sm p-8 rounded-3xl">
+            <div className="mb-16 bg-card/90 backdrop-blur-sm p-8 rounded-3xl">
               <h2 className="text-2xl font-semibold mb-6">About</h2>
-              <div className="prose prose-lg max-w-none text-gray-600">
+              <div className="prose prose-lg max-w-none text-muted-foreground">
                 <p className="leading-relaxed">
                   I am a computer science engineering student and a freelance software engineer. 
                   I interned at Brio Technologies and PropReturns as a Software Engineering and 
@@ -133,7 +133,7 @@ const AuthorPage: React.FC = () => {
               ].map((category, index) => (
                 <div 
                   key={index}
-                  className="relative p-6 rounded-3xl bg-white/80 backdrop-blur-sm hover:shadow-md transition-all group border border-gray-200 hover:border-[#fc4707]"
+                  className="relative p-6 rounded-3xl bg-card/80 backdrop-blur-sm hover:shadow-md transition-all group border border-border hover:border-[#fc4707]"
                 >
                   <BorderBeam 
                     size={300}
@@ -146,7 +146,7 @@ const AuthorPage: React.FC = () => {
                   <h3 className="text-lg font-semibold mb-4">{category.title}</h3>
                   <ul className="space-y-2">
                     {category.items.map((item, idx) => (
-                      <li key={idx} className="text-gray-600">{item}</li>
+                      <li key={idx} className="text-muted-foreground">{item}</li>
                     ))}
                   </ul>
                 </div>
@@ -154,7 +154,7 @@ const AuthorPage: React.FC = () => {
             </div>
 
             {/* Projects Section - using consistent card styling */}
-            <div className="bg-white/90 backdrop-blur-sm p-8 rounded-3xl">
+            <div className="bg-card/90 backdrop-blur-sm p-8 rounded-3xl">
               <h2 className="text-2xl font-semibold mb-6">Featured Projects</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
@@ -173,13 +173,13 @@ const AuthorPage: React.FC = () => {
                     key={index}
                     href={project.link}
                     target="_blank"
-                    className="group p-6 rounded-3xl bg-white/90 backdrop-blur-sm border border-gray-200 hover:border-[#fc4707] transition-all hover:bg-white/95"
+                    className="group p-6 rounded-3xl bg-card/90 backdrop-blur-sm border border-border hover:border-[#fc4707] transition-all hover:bg-card/95"
                   >
                     <div className="flex justify-between items-start mb-4">
                       <h3 className="text-xl font-semibold">{project.title}</h3>
                       <ArrowUpRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity text-[#fc4707]" />
                     </div>
-                    <p className="text-gray-600">{project.description}</p>
+                    <p className="text-muted-foreground">{project.description}</p>
                   </Link>
                 ))}
               </div>

@@ -55,27 +55,27 @@ export default function ContributePage() {
 
   const features = [
     {
-      icon: <GraduationCap className="w-12 h-12 text-black" />,
+      icon: <GraduationCap className="w-12 h-12 text-foreground" />,
       title: "Student-First",
       description: "Built by BITS Pilani Dubai students for students"
     },
     {
-      icon: <MessageSquare className="w-12 h-12 text-black" />,
+      icon: <MessageSquare className="w-12 h-12 text-foreground" />,
       title: "Community",
       description: "Discuss and collaborate with fellow batchmates while developing real-world projects"
     },
     {
-      icon: <FileCode className="w-12 h-12 text-black" />,
+      icon: <FileCode className="w-12 h-12 text-foreground" />,
       title: "Open Source",
       description: "Contribute to improve university experience"
     },
     {
-      icon: <School className="w-12 h-12 text-black" />,
+      icon: <School className="w-12 h-12 text-foreground" />,
       title: "Academic Focus",
       description: "Help build tools for academic success"
     },
     {
-      icon: <Users className="w-12 h-12 text-black" />,
+      icon: <Users className="w-12 h-12 text-foreground" />,
       title: "Teamwork",
       description: "Work with fellow BITS Pilani developers"
     }
@@ -117,7 +117,7 @@ export default function ContributePage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-background to-muted/30">
       {/* Hero Section */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 text-center max-w-7xl">
         <div className="flex justify-center mb-8">
@@ -137,7 +137,7 @@ export default function ContributePage() {
             Make University Life Better
           </span>
         </h1>
-        <p className="text-lg sm:text-xl text-gray-600 mb-8 sm:mb-12 max-w-2xl mx-auto px-4 sm:px-6">
+        <p className="text-lg sm:text-xl text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto px-4 sm:px-6">
           Join us in building the ultimate unified portal for BITS Pilani Dubai Campus students.
           Every contribution helps make university life easier for everyone.
         </p>
@@ -145,12 +145,12 @@ export default function ContributePage() {
         {/* Features Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16">
           {features.map((feature, index) => (
-            <div key={index} className="p-4 sm:p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+            <div key={index} className="p-4 sm:p-6 bg-card rounded-2xl shadow-sm hover:shadow-md transition-shadow">
               <div className="flex justify-center mb-3 sm:mb-4">
                 {feature.icon}
               </div>
               <h3 className="text-base sm:text-lg font-semibold mb-2">{feature.title}</h3>
-              <p className="text-sm text-gray-600">{feature.description}</p>
+              <p className="text-sm text-muted-foreground">{feature.description}</p>
             </div>
           ))}
         </div>
@@ -158,14 +158,14 @@ export default function ContributePage() {
         {/* CTA Button */}
         <a 
           href="https://github.com/HUSAM-07/AccessX"
-          className="bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:bg-gray-800 transition-colors inline-flex items-center gap-2"
+          className="bg-primary text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:bg-primary/90 transition-colors inline-flex items-center gap-2"
         >
           <span>Start Contributing</span>
           <ArrowUpRight className="w-5 h-5" />
         </a>
 
         {/* Feature List */}
-        <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 mt-6 sm:mt-8 text-base sm:text-lg text-gray-600">
+        <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 mt-6 sm:mt-8 text-base sm:text-lg text-muted-foreground">
           <span className="flex items-center justify-center gap-3">
             <GitBranch className="w-5 h-5 sm:w-6 sm:h-6" /> Fork Repository
           </span>
@@ -179,11 +179,11 @@ export default function ContributePage() {
       </div>
 
       {/* Add Contributors Section */}
-      <div className="bg-white py-12 sm:py-16">
+      <div className="bg-card py-12 sm:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           <div className="text-center mb-8">
             <h2 className="text-3xl sm:text-4xl font-bold mb-3">Our Contributors</h2>
-            <p className="text-gray-600 mb-8">
+            <p className="text-muted-foreground mb-8">
               Join these awesome developers and contributors in making unidash better
             </p>
             <div className="flex justify-center">
@@ -198,11 +198,11 @@ export default function ContributePage() {
       </div>
 
       {/* Development Workflow Section */}
-      <div className="bg-white py-12 sm:py-16 lg:py-20">
+      <div className="bg-card py-12 sm:py-16 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           <div className="text-center mb-8 sm:mb-12 lg:mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">Development Workflow</h2>
-            <p className="text-gray-600">Follow our structured process for contributing to UniDash</p>
+            <p className="text-muted-foreground">Follow our structured process for contributing to UniDash</p>
           </div>
           
           <ScrollArea className="h-[400px] sm:h-[500px] rounded-xl border">
@@ -213,7 +213,7 @@ export default function ContributePage() {
                 </h3>
                 <MermaidDiagram 
                   diagram={branchingDiagram}
-                  className="bg-white p-6 rounded-xl shadow-sm"
+                  className="bg-card p-6 rounded-xl shadow-sm"
                 />
               </div>
 
@@ -225,7 +225,7 @@ export default function ContributePage() {
                 </h3>
                 <MermaidDiagram 
                   diagram={prProcessDiagram}
-                  className="bg-white p-6 rounded-xl shadow-sm"
+                  className="bg-card p-6 rounded-xl shadow-sm"
                 />
               </div>
             </div>
@@ -234,26 +234,26 @@ export default function ContributePage() {
       </div>
 
       {/* Documentation Section */}
-      <div className="bg-white py-12 sm:py-16 lg:py-20">
+      <div className="bg-card py-12 sm:py-16 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           <div className="text-center mb-8 sm:mb-12 lg:mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">Documentation</h2>
-            <p className="text-gray-600 sm:text-lg">Everything you need to contribute effectively</p>
+            <p className="text-muted-foreground sm:text-lg">Everything you need to contribute effectively</p>
           </div>
 
           <div className="grid grid-cols-12 gap-4 sm:gap-6 max-w-[1328px] mx-auto">
             {documentationSections.map((section, index) => (
               <div 
                 key={index} 
-                className={`@container/section flex flex-col p-4 sm:p-6 bg-white rounded-2xl border border-gray-200 hover:border-[#fc4707] transition-all hover:shadow-md ${section.className}`}
+                className={`@container/section flex flex-col p-4 sm:p-6 bg-card rounded-2xl border border-border hover:border-[#fc4707] transition-all hover:shadow-md ${section.className}`}
               >
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-orange-100 rounded-2xl flex items-center justify-center">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-muted rounded-2xl flex items-center justify-center">
                     {section.icon}
                   </div>
                   <h3 className="text-lg sm:text-xl font-semibold">{section.title}</h3>
                 </div>
-                <p className="text-sm sm:text-base text-gray-600">{section.description}</p>
+                <p className="text-sm sm:text-base text-muted-foreground">{section.description}</p>
               </div>
             ))}
           </div>

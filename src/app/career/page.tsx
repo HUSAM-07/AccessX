@@ -112,7 +112,7 @@ export default function CareerPage() {
   if (!companies || companies.length === 0) {
     return (
       <div className="flex items-center justify-center min-h-[400px]">
-        <p className="text-gray-600">Loading companies...</p>
+        <p className="text-muted-foreground">Loading companies...</p>
       </div>
     );
   }
@@ -131,7 +131,7 @@ export default function CareerPage() {
         <div className="relative">
           <span className="inline-block bg-[#fc4707] text-white text-sm px-4 py-1 rounded-full mb-4">We're helping you get hired!</span>
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">Career Services Division</h1>
-          <p className="text-gray-600 text-lg max-w-2xl mb-8">
+          <p className="text-muted-foreground text-lg max-w-2xl mb-8">
             Connecting BITS Dubai students with world-class internship opportunities.
           </p>
           
@@ -153,7 +153,7 @@ export default function CareerPage() {
           <a
             key={section.id}
             href={`#${section.id}`}
-            className="inline-flex px-4 py-2 rounded-full text-sm bg-gray-100 hover:bg-[#fc4707] hover:text-white transition-colors"
+            className="inline-flex px-4 py-2 rounded-full text-sm bg-muted hover:bg-[#fc4707] hover:text-white transition-colors"
           >
             {section.title}
           </a>
@@ -164,13 +164,13 @@ export default function CareerPage() {
       <section id="about" className="mb-16">
         <h2 className="text-2xl font-semibold mb-6">Who Are We</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-[#fc4707] transition-colors">
-            <p className="text-gray-600">
+          <div className="bg-card p-8 rounded-2xl shadow-sm border border-border hover:border-[#fc4707] transition-colors">
+            <p className="text-muted-foreground">
               The Career Services Division at BITS Pilani Dubai plays a pivotal role in facilitating career opportunities for students in their final years and after graduation. We foster strong industry partnerships to bring a wide range of employment options.
             </p>
           </div>
-          <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-[#fc4707] transition-colors">
-            <p className="text-gray-600">
+          <div className="bg-card p-8 rounded-2xl shadow-sm border border-border hover:border-[#fc4707] transition-colors">
+            <p className="text-muted-foreground">
               Our flagship event, the BITS Career Fair, takes place during the second semester each year, attracting over 70 companies from various sectors to recruit students from all disciplines.
             </p>
           </div>
@@ -180,11 +180,11 @@ export default function CareerPage() {
       {/* Resume Building Tips Section */}
       <section id="resume-tips" className="mb-16">
         <h2 className="text-2xl font-semibold mb-6">Resume Building Tips</h2>
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:border-[#fc4707] transition-colors">
+        <div className="bg-card rounded-2xl shadow-sm border border-border overflow-hidden hover:border-[#fc4707] transition-colors">
           <div className="p-8">
             <div className="max-w-3xl">
               <h3 className="text-xl font-semibold mb-4">Create a Winning Resume</h3>
-              <p className="text-gray-600 mb-8">
+              <p className="text-muted-foreground mb-8">
                 Download our comprehensive guide to crafting a professional resume that stands out. 
                 Learn about formatting best practices, essential sections, and industry-specific tips.
               </p>
@@ -200,23 +200,23 @@ export default function CareerPage() {
               </div>
             </div>
           </div>
-          <div className="bg-gray-50 p-8 border-t border-gray-100">
+          <div className="bg-muted p-8 border-t border-border">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-[#fc4707]"></div>
-                <span className="text-gray-600">Professional formatting templates</span>
+                <span className="text-muted-foreground">Professional formatting templates</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-[#fc4707]"></div>
-                <span className="text-gray-600">Action words and power phrases</span>
+                <span className="text-muted-foreground">Action words and power phrases</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-[#fc4707]"></div>
-                <span className="text-gray-600">Industry-specific examples</span>
+                <span className="text-muted-foreground">Industry-specific examples</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-[#fc4707]"></div>
-                <span className="text-gray-600">Common mistakes to avoid</span>
+                <span className="text-muted-foreground">Common mistakes to avoid</span>
               </div>
             </div>
           </div>
@@ -226,7 +226,7 @@ export default function CareerPage() {
       {/* Consultation Section */}
       <section id="consultation" className="mb-16">
         <h2 className="text-2xl font-semibold mb-6">Guidance with Career Services Division</h2>
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:border-[#fc4707] transition-colors">
+        <div className="bg-card rounded-2xl shadow-sm border border-border overflow-hidden hover:border-[#fc4707] transition-colors">
           <div className="p-8">
             <div className="space-y-8">
               {/* Introduction */}
@@ -234,7 +234,7 @@ export default function CareerPage() {
                 <h3 className="text-xl font-semibold mb-4">
                   Get Personalized Career Guidance
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-muted-foreground">
                   Schedule a 15-minute consultation with the Career Services Division. 
                   You can discuss about placement and internship opportunities, 
                   receive guidance, and get answers to any questions you might have about your career path.
@@ -247,19 +247,19 @@ export default function CareerPage() {
                   <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center">
                     <Clock className="w-4 h-4 text-[#fc4707]" />
                   </div>
-                  <span className="text-gray-600">15-minute sessions</span>
+                  <span className="text-muted-foreground">15-minute sessions</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center">
                     <Users className="w-4 h-4 text-[#fc4707]" />
                   </div>
-                  <span className="text-gray-600">1:1 guidance</span>
+                  <span className="text-muted-foreground">1:1 guidance</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center">
                     <GraduationCap className="w-4 h-4 text-[#fc4707]" />
                   </div>
-                  <span className="text-gray-600">Career planning</span>
+                  <span className="text-muted-foreground">Career planning</span>
                 </div>
               </div>
 
@@ -268,12 +268,12 @@ export default function CareerPage() {
                 {/* Expert 1 */}
                 <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-16 h-16 rounded-full bg-white shadow-sm flex items-center justify-center">
+                    <div className="w-16 h-16 rounded-full bg-card shadow-sm flex items-center justify-center">
                       <Users className="w-8 h-8 text-[#fc4707]" />
                     </div>
                     <div className="flex-1">
                       <h4 className="text-lg font-semibold mb-2">Amsal Sir</h4>
-                      <p className="text-gray-600 text-sm mb-4">Specializing in placement guidance and career development strategies</p>
+                      <p className="text-muted-foreground text-sm mb-4">Specializing in placement guidance and career development strategies</p>
                       <ShimmerButton
                         onClick={() => window.location.href = '/error-universal'}
                         shimmerColor="#ffffff"
@@ -289,12 +289,12 @@ export default function CareerPage() {
                 {/* Expert 2 */}
                 <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-16 h-16 rounded-full bg-white shadow-sm flex items-center justify-center">
+                    <div className="w-16 h-16 rounded-full bg-card shadow-sm flex items-center justify-center">
                       <Users className="w-8 h-8 text-[#fc4707]" />
                     </div>
                     <div className="flex-1">
                       <h4 className="text-lg font-semibold mb-2">Abdul Razzak Sir</h4>
-                      <p className="text-gray-600 text-sm mb-4">Focusing on internship opportunities and industry connections</p>
+                      <p className="text-muted-foreground text-sm mb-4">Focusing on internship opportunities and industry connections</p>
                       <ShimmerButton
                         onClick={() => window.location.href = '/error-universal'}
                         shimmerColor="#ffffff"
@@ -315,10 +315,10 @@ export default function CareerPage() {
       {/* Companies Section */}
       <section id="companies" className="mb-16">
         <h2 className="text-2xl font-semibold mb-6">List of Companies</h2>
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:border-[#fc4707] transition-colors">
+        <div className="bg-card rounded-2xl shadow-sm border border-border overflow-hidden hover:border-[#fc4707] transition-colors">
           <div className="p-6">
             <div className="flex justify-end mb-6">
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-muted-foreground">
                 Found {sortedCompanies.length} companies
               </p>
             </div>
@@ -326,7 +326,7 @@ export default function CareerPage() {
             <div className="border rounded-xl overflow-hidden">
               <Table>
                 <TableHeader>
-                  <TableRow className="bg-gray-50">
+                  <TableRow className="bg-muted">
                     <TableHead className="font-medium">Company Name</TableHead>
                     <TableHead className="font-medium">Stipend</TableHead>
                     <TableHead className="font-medium hidden md:table-cell">Common Roles</TableHead>
@@ -335,7 +335,7 @@ export default function CareerPage() {
                 </TableHeader>
                 <TableBody>
                   {paginatedCompanies.map((company) => (
-                    <TableRow key={company["Company Name"]} className="hover:bg-gray-50">
+                    <TableRow key={company["Company Name"]} className="hover:bg-muted">
                       <TableCell className="font-medium">{company["Company Name"]}</TableCell>
                       <TableCell>{company.Stipend}</TableCell>
                       <TableCell className="hidden md:table-cell">{company["Common Roles"]}</TableCell>
@@ -347,7 +347,7 @@ export default function CareerPage() {
             </div>
 
             <div className="mt-6 flex justify-between items-center">
-              <div className="text-sm text-gray-500">
+              <div className="text-sm text-muted-foreground">
                 Showing {Math.min(companiesPerPage, sortedCompanies.length)} of {sortedCompanies.length} companies
               </div>
               <div className="flex gap-2">
@@ -355,10 +355,10 @@ export default function CareerPage() {
                   onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
                   disabled={currentPage === 1}
                   className={cn(
-                    "px-4 py-2 text-sm rounded-full border border-gray-200 hover:border-[#fc4707] hover:text-[#fc4707] transition-colors",
+                    "px-4 py-2 text-sm rounded-full border border-border hover:border-[#fc4707] hover:text-[#fc4707] transition-colors",
                     currentPage === 1 
                       ? "opacity-50 cursor-not-allowed" 
-                      : "hover:bg-gray-50 cursor-pointer"
+                      : "hover:bg-muted cursor-pointer"
                   )}
                 >
                   Previous
@@ -367,10 +367,10 @@ export default function CareerPage() {
                   onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
                   disabled={currentPage === totalPages}
                   className={cn(
-                    "px-4 py-2 text-sm rounded-full border border-gray-200 hover:border-[#fc4707] hover:text-[#fc4707] transition-colors",
+                    "px-4 py-2 text-sm rounded-full border border-border hover:border-[#fc4707] hover:text-[#fc4707] transition-colors",
                     currentPage === totalPages 
                       ? "opacity-50 cursor-not-allowed" 
-                      : "hover:bg-gray-50 cursor-pointer"
+                      : "hover:bg-muted cursor-pointer"
                   )}
                 >
                   Next
@@ -381,7 +381,7 @@ export default function CareerPage() {
         </div>
       </section>
 
-      <div className="text-center text-sm text-gray-500">
+      <div className="text-center text-sm text-muted-foreground">
         <p>All the companies listed are potential companies that have been reported to come for recruitment season every year.</p>
       </div>
     </div>
