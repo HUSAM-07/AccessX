@@ -7,6 +7,18 @@ import { flushSync } from "react-dom"
 
 import { cn } from "@/lib/utils"
 
+// Type declaration for View Transition API
+declare global {
+  interface Document {
+    startViewTransition?: (callback: () => void) => {
+      ready: Promise<void>
+      finished: Promise<void>
+      updateCallbackDone: Promise<void>
+      skipTransition: () => void
+    }
+  }
+}
+
 interface AnimatedThemeTogglerProps
   extends React.ComponentPropsWithoutRef<"button"> {
   duration?: number
@@ -31,34 +43,40 @@ export const AnimatedThemeToggler = ({
 
     const newTheme = resolvedTheme === "dark" ? "light" : "dark"
 
-    await document.startViewTransition(() => {
-      flushSync(() => {
-        setTheme(newTheme)
-      })
-    }).ready
+    // Check if View Transition API is supported
+    if (document.startViewTransition) {
+      await document.startViewTransition(() => {
+        flushSync(() => {
+          setTheme(newTheme)
+        })
+      }).ready
 
-    const { top, left, width, height } =
-      buttonRef.current.getBoundingClientRect()
-    const x = left + width / 2
-    const y = top + height / 2
-    const maxRadius = Math.hypot(
-      Math.max(left, window.innerWidth - left),
-      Math.max(top, window.innerHeight - top)
-    )
+      const { top, left, width, height } =
+        buttonRef.current.getBoundingClientRect()
+      const x = left + width / 2
+      const y = top + height / 2
+      const maxRadius = Math.hypot(
+        Math.max(left, window.innerWidth - left),
+        Math.max(top, window.innerHeight - top)
+      )
 
-    document.documentElement.animate(
-      {
-        clipPath: [
-          `circle(0px at ${x}px ${y}px)`,
-          `circle(${maxRadius}px at ${x}px ${y}px)`,
-        ],
-      },
-      {
-        duration,
-        easing: "ease-in-out",
-        pseudoElement: "::view-transition-new(root)",
-      }
-    )
+      document.documentElement.animate(
+        {
+          clipPath: [
+            `circle(0px at ${x}px ${y}px)`,
+            `circle(${maxRadius}px at ${x}px ${y}px)`,
+          ],
+        },
+        {
+          duration,
+          easing: "ease-in-out",
+          pseudoElement: "::view-transition-new(root)",
+        }
+      )
+    } else {
+      // Fallback if View Transition API is not supported
+      setTheme(newTheme)
+    }
   }, [resolvedTheme, setTheme, duration])
 
   if (!mounted) {
